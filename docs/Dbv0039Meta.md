@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Plugin** | Pointer to [**Dbv0038MetaPlugin**](Dbv0038MetaPlugin.md) |  | [optional] 
+**Plugin** | Pointer to [**Dbv0039MetaPlugin**](Dbv0039MetaPlugin.md) |  | [optional] 
 **Slurm** | Pointer to [**Dbv0039MetaSlurm**](Dbv0039MetaSlurm.md) |  | [optional] 
 
 ## Methods
@@ -28,20 +28,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetPlugin
 
-`func (o *Dbv0039Meta) GetPlugin() Dbv0038MetaPlugin`
+`func (o *Dbv0039Meta) GetPlugin() Dbv0039MetaPlugin`
 
 GetPlugin returns the Plugin field if non-nil, zero value otherwise.
 
 ### GetPluginOk
 
-`func (o *Dbv0039Meta) GetPluginOk() (*Dbv0038MetaPlugin, bool)`
+`func (o *Dbv0039Meta) GetPluginOk() (*Dbv0039MetaPlugin, bool)`
 
 GetPluginOk returns a tuple with the Plugin field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPlugin
 
-`func (o *Dbv0039Meta) SetPlugin(v Dbv0038MetaPlugin)`
+`func (o *Dbv0039Meta) SetPlugin(v Dbv0039MetaPlugin)`
 
 SetPlugin sets Plugin field to given value.
 
