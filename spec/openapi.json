@@ -15137,7 +15137,7 @@
              "$ref": "#\/components\/schemas\/v0.0.39_meta"
            },
            "errors": {
-             "$ref": "#\/components\/schemas\/status"
+             "$ref": "#\/components\/schemas\/v0.0.39_error"
            },
            "warnings": {
              "$ref": "#\/components\/schemas\/v0.0.39_warnings"
