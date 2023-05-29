@@ -32,6 +32,6 @@ func main() {
 	//fmt.Println(jobs)
 	for _, job := range jobs.GetJobs() {
 		//fmt.Println(job)
-		fmt.Printf("Job %s - %s\n", job.GetJobId(), job.GetJobState())
+		fmt.Printf("Job %d - %s\n", job.GetJobId(), job.GetJobState())
 	}
 }
