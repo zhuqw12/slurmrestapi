@@ -5320,7 +5320,6 @@
       "v0.0.38_signal": {
         "type": "string",
         "description": "POSIX signal name",
-        "format": "int32",
         "enum": [
           "HUP",
           "INT",

@@ -3494,6 +3494,7 @@
            },
            "priority": {
              "type": "integer",
+             "format": "int64",
              "description": "Assigned priority"
            },
            "shares_raw": {
@@ -5858,6 +5859,7 @@
            },
            "priority": {
              "type": "integer",
+             "format": "int64",
              "description": "relative priority of the job"
            },
            "profile": {
