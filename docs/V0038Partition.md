@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Flags** | Pointer to **[]string** | partition options | [optional] 
 **PreemptionMode** | Pointer to **[]string** | preemption type | [optional] 
-**AllowedAllocationNodes** | Pointer to **string** | list names of allowed allocating nodes | [optional] 
+**AllowedAllocationNodes** | Pointer to **int32** | list names of allowed allocating nodes | [optional] 
 **AllowedAccounts** | Pointer to **string** | comma delimited list of accounts | [optional] 
 **AllowedGroups** | Pointer to **string** | comma delimited list of groups | [optional] 
 **AllowedQos** | Pointer to **string** | comma delimited list of qos | [optional] 
@@ -106,20 +106,20 @@ HasPreemptionMode returns a boolean if a field has been set.
 
 ### GetAllowedAllocationNodes
 
-`func (o *V0038Partition) GetAllowedAllocationNodes() string`
+`func (o *V0038Partition) GetAllowedAllocationNodes() int32`
 
 GetAllowedAllocationNodes returns the AllowedAllocationNodes field if non-nil, zero value otherwise.
 
 ### GetAllowedAllocationNodesOk
 
-`func (o *V0038Partition) GetAllowedAllocationNodesOk() (*string, bool)`
+`func (o *V0038Partition) GetAllowedAllocationNodesOk() (*int32, bool)`
 
 GetAllowedAllocationNodesOk returns a tuple with the AllowedAllocationNodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllowedAllocationNodes
 
-`func (o *V0038Partition) SetAllowedAllocationNodes(v string)`
+`func (o *V0038Partition) SetAllowedAllocationNodes(v int32)`
 
 SetAllowedAllocationNodes sets AllowedAllocationNodes field to given value.
 

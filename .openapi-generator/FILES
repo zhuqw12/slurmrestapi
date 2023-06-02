@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -293,6 +292,4 @@ model_v0_0_38_reservation_purge_completed.go
 model_v0_0_38_reservations_response.go
 model_v0_0_38_signal.go
 response.go
-test/api_openapi_test.go
-test/api_slurm_test.go
 utils.go

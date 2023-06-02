@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **Id** | Pointer to **string** | Database id | [optional] 
 **Limits** | Pointer to [**Dbv0038QosLimits**](Dbv0038QosLimits.md) |  | [optional] 
 **Preempt** | Pointer to [**Dbv0038QosPreempt**](Dbv0038QosPreempt.md) |  | [optional] 
-**Priority** | Pointer to **int32** | QOS priority | [optional] 
+**Priority** | Pointer to **int64** | QOS priority | [optional] 
 **UsageFactor** | Pointer to **float32** | Usage factor | [optional] 
 **UsageThreshold** | Pointer to **float32** | Usage threshold | [optional] 
 **Name** | Pointer to **string** | Assigned name of QOS | [optional] 
@@ -160,20 +160,20 @@ HasPreempt returns a boolean if a field has been set.
 
 ### GetPriority
 
-`func (o *Dbv0038Qos) GetPriority() int32`
+`func (o *Dbv0038Qos) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *Dbv0038Qos) GetPriorityOk() (*int32, bool)`
+`func (o *Dbv0038Qos) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *Dbv0038Qos) SetPriority(v int32)`
+`func (o *Dbv0038Qos) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

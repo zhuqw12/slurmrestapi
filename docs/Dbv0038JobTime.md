@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Elapsed** | Pointer to **int32** | Total time elapsed | [optional] 
-**Eligible** | Pointer to **int32** | Total time eligible to run | [optional] 
-**End** | Pointer to **int32** | Timestamp of when job ended | [optional] 
-**Start** | Pointer to **int32** | Timestamp of when job started | [optional] 
-**Submission** | Pointer to **int32** | Timestamp of when job submitted | [optional] 
+**Eligible** | Pointer to **int64** | Total time eligible to run | [optional] 
+**End** | Pointer to **int64** | Timestamp of when job ended | [optional] 
+**Start** | Pointer to **int64** | Timestamp of when job started | [optional] 
+**Submission** | Pointer to **int64** | Timestamp of when job submitted | [optional] 
 **Suspended** | Pointer to **int32** | Timestamp of when job last suspended | [optional] 
 **System** | Pointer to [**Dbv0038JobTimeSystem**](Dbv0038JobTimeSystem.md) |  | [optional] 
 **Total** | Pointer to [**Dbv0038JobTimeTotal**](Dbv0038JobTimeTotal.md) |  | [optional] 
@@ -61,20 +61,20 @@ HasElapsed returns a boolean if a field has been set.
 
 ### GetEligible
 
-`func (o *Dbv0038JobTime) GetEligible() int32`
+`func (o *Dbv0038JobTime) GetEligible() int64`
 
 GetEligible returns the Eligible field if non-nil, zero value otherwise.
 
 ### GetEligibleOk
 
-`func (o *Dbv0038JobTime) GetEligibleOk() (*int32, bool)`
+`func (o *Dbv0038JobTime) GetEligibleOk() (*int64, bool)`
 
 GetEligibleOk returns a tuple with the Eligible field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEligible
 
-`func (o *Dbv0038JobTime) SetEligible(v int32)`
+`func (o *Dbv0038JobTime) SetEligible(v int64)`
 
 SetEligible sets Eligible field to given value.
 
@@ -86,20 +86,20 @@ HasEligible returns a boolean if a field has been set.
 
 ### GetEnd
 
-`func (o *Dbv0038JobTime) GetEnd() int32`
+`func (o *Dbv0038JobTime) GetEnd() int64`
 
 GetEnd returns the End field if non-nil, zero value otherwise.
 
 ### GetEndOk
 
-`func (o *Dbv0038JobTime) GetEndOk() (*int32, bool)`
+`func (o *Dbv0038JobTime) GetEndOk() (*int64, bool)`
 
 GetEndOk returns a tuple with the End field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetEnd
 
-`func (o *Dbv0038JobTime) SetEnd(v int32)`
+`func (o *Dbv0038JobTime) SetEnd(v int64)`
 
 SetEnd sets End field to given value.
 
@@ -111,20 +111,20 @@ HasEnd returns a boolean if a field has been set.
 
 ### GetStart
 
-`func (o *Dbv0038JobTime) GetStart() int32`
+`func (o *Dbv0038JobTime) GetStart() int64`
 
 GetStart returns the Start field if non-nil, zero value otherwise.
 
 ### GetStartOk
 
-`func (o *Dbv0038JobTime) GetStartOk() (*int32, bool)`
+`func (o *Dbv0038JobTime) GetStartOk() (*int64, bool)`
 
 GetStartOk returns a tuple with the Start field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetStart
 
-`func (o *Dbv0038JobTime) SetStart(v int32)`
+`func (o *Dbv0038JobTime) SetStart(v int64)`
 
 SetStart sets Start field to given value.
 
@@ -136,20 +136,20 @@ HasStart returns a boolean if a field has been set.
 
 ### GetSubmission
 
-`func (o *Dbv0038JobTime) GetSubmission() int32`
+`func (o *Dbv0038JobTime) GetSubmission() int64`
 
 GetSubmission returns the Submission field if non-nil, zero value otherwise.
 
 ### GetSubmissionOk
 
-`func (o *Dbv0038JobTime) GetSubmissionOk() (*int32, bool)`
+`func (o *Dbv0038JobTime) GetSubmissionOk() (*int64, bool)`
 
 GetSubmissionOk returns a tuple with the Submission field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetSubmission
 
-`func (o *Dbv0038JobTime) SetSubmission(v int32)`
+`func (o *Dbv0038JobTime) SetSubmission(v int64)`
 
 SetSubmission sets Submission field to given value.
 

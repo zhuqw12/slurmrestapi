@@ -25,7 +25,7 @@ type V0038Partition struct {
 	// preemption type
 	PreemptionMode []string `json:"preemption_mode,omitempty"`
 	// list names of allowed allocating nodes
-	AllowedAllocationNodes *string `json:"allowed_allocation_nodes,omitempty"`
+	AllowedAllocationNodes *int32 `json:"allowed_allocation_nodes,omitempty"`
 	// comma delimited list of accounts
 	AllowedAccounts *string `json:"allowed_accounts,omitempty"`
 	// comma delimited list of groups
@@ -164,9 +164,9 @@ func (o *V0038Partition) SetPreemptionMode(v []string) {
 }
 
 // GetAllowedAllocationNodes returns the AllowedAllocationNodes field value if set, zero value otherwise.
-func (o *V0038Partition) GetAllowedAllocationNodes() string {
+func (o *V0038Partition) GetAllowedAllocationNodes() int32 {
 	if o == nil || IsNil(o.AllowedAllocationNodes) {
-		var ret string
+		var ret int32
 		return ret
 	}
 	return *o.AllowedAllocationNodes
@@ -174,7 +174,7 @@ func (o *V0038Partition) GetAllowedAllocationNodes() string {
 
 // GetAllowedAllocationNodesOk returns a tuple with the AllowedAllocationNodes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V0038Partition) GetAllowedAllocationNodesOk() (*string, bool) {
+func (o *V0038Partition) GetAllowedAllocationNodesOk() (*int32, bool) {
 	if o == nil || IsNil(o.AllowedAllocationNodes) {
 		return nil, false
 	}
@@ -190,8 +190,8 @@ func (o *V0038Partition) HasAllowedAllocationNodes() bool {
 	return false
 }
 
-// SetAllowedAllocationNodes gets a reference to the given string and assigns it to the AllowedAllocationNodes field.
-func (o *V0038Partition) SetAllowedAllocationNodes(v string) {
+// SetAllowedAllocationNodes gets a reference to the given int32 and assigns it to the AllowedAllocationNodes field.
+func (o *V0038Partition) SetAllowedAllocationNodes(v int32) {
 	o.AllowedAllocationNodes = &v
 }
 

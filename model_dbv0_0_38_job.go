@@ -24,7 +24,7 @@ type Dbv0038Job struct {
 	Account *string            `json:"account,omitempty"`
 	Comment *Dbv0038JobComment `json:"comment,omitempty"`
 	// Nodes allocated to job
-	AllocationNodes *string                      `json:"allocation_nodes,omitempty"`
+	AllocationNodes *int32                       `json:"allocation_nodes,omitempty"`
 	Array           *Dbv0038JobArray             `json:"array,omitempty"`
 	Time            *Dbv0038JobTime              `json:"time,omitempty"`
 	Association     *Dbv0038AssociationShortInfo `json:"association,omitempty"`
@@ -49,7 +49,7 @@ type Dbv0038Job struct {
 	// Assigned job's partition
 	Partition *string `json:"partition,omitempty"`
 	// Priority
-	Priority *int32 `json:"priority,omitempty"`
+	Priority *int64 `json:"priority,omitempty"`
 	// Assigned qos name
 	Qos      *string             `json:"qos,omitempty"`
 	Required *Dbv0038JobRequired `json:"required,omitempty"`
@@ -151,9 +151,9 @@ func (o *Dbv0038Job) SetComment(v Dbv0038JobComment) {
 }
 
 // GetAllocationNodes returns the AllocationNodes field value if set, zero value otherwise.
-func (o *Dbv0038Job) GetAllocationNodes() string {
+func (o *Dbv0038Job) GetAllocationNodes() int32 {
 	if o == nil || IsNil(o.AllocationNodes) {
-		var ret string
+		var ret int32
 		return ret
 	}
 	return *o.AllocationNodes
@@ -161,7 +161,7 @@ func (o *Dbv0038Job) GetAllocationNodes() string {
 
 // GetAllocationNodesOk returns a tuple with the AllocationNodes field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038Job) GetAllocationNodesOk() (*string, bool) {
+func (o *Dbv0038Job) GetAllocationNodesOk() (*int32, bool) {
 	if o == nil || IsNil(o.AllocationNodes) {
 		return nil, false
 	}
@@ -177,8 +177,8 @@ func (o *Dbv0038Job) HasAllocationNodes() bool {
 	return false
 }
 
-// SetAllocationNodes gets a reference to the given string and assigns it to the AllocationNodes field.
-func (o *Dbv0038Job) SetAllocationNodes(v string) {
+// SetAllocationNodes gets a reference to the given int32 and assigns it to the AllocationNodes field.
+func (o *Dbv0038Job) SetAllocationNodes(v int32) {
 	o.AllocationNodes = &v
 }
 
@@ -663,9 +663,9 @@ func (o *Dbv0038Job) SetPartition(v string) {
 }
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
-func (o *Dbv0038Job) GetPriority() int32 {
+func (o *Dbv0038Job) GetPriority() int64 {
 	if o == nil || IsNil(o.Priority) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Priority
@@ -673,7 +673,7 @@ func (o *Dbv0038Job) GetPriority() int32 {
 
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038Job) GetPriorityOk() (*int32, bool) {
+func (o *Dbv0038Job) GetPriorityOk() (*int64, bool) {
 	if o == nil || IsNil(o.Priority) {
 		return nil, false
 	}
@@ -689,8 +689,8 @@ func (o *Dbv0038Job) HasPriority() bool {
 	return false
 }
 
-// SetPriority gets a reference to the given int32 and assigns it to the Priority field.
-func (o *Dbv0038Job) SetPriority(v int32) {
+// SetPriority gets a reference to the given int64 and assigns it to the Priority field.
+func (o *Dbv0038Job) SetPriority(v int64) {
 	o.Priority = &v
 }
 

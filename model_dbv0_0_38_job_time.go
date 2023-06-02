@@ -23,13 +23,13 @@ type Dbv0038JobTime struct {
 	// Total time elapsed
 	Elapsed *int32 `json:"elapsed,omitempty"`
 	// Total time eligible to run
-	Eligible *int32 `json:"eligible,omitempty"`
+	Eligible *int64 `json:"eligible,omitempty"`
 	// Timestamp of when job ended
-	End *int32 `json:"end,omitempty"`
+	End *int64 `json:"end,omitempty"`
 	// Timestamp of when job started
-	Start *int32 `json:"start,omitempty"`
+	Start *int64 `json:"start,omitempty"`
 	// Timestamp of when job submitted
-	Submission *int32 `json:"submission,omitempty"`
+	Submission *int64 `json:"submission,omitempty"`
 	// Timestamp of when job last suspended
 	Suspended *int32                `json:"suspended,omitempty"`
 	System    *Dbv0038JobTimeSystem `json:"system,omitempty"`
@@ -89,9 +89,9 @@ func (o *Dbv0038JobTime) SetElapsed(v int32) {
 }
 
 // GetEligible returns the Eligible field value if set, zero value otherwise.
-func (o *Dbv0038JobTime) GetEligible() int32 {
+func (o *Dbv0038JobTime) GetEligible() int64 {
 	if o == nil || IsNil(o.Eligible) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Eligible
@@ -99,7 +99,7 @@ func (o *Dbv0038JobTime) GetEligible() int32 {
 
 // GetEligibleOk returns a tuple with the Eligible field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobTime) GetEligibleOk() (*int32, bool) {
+func (o *Dbv0038JobTime) GetEligibleOk() (*int64, bool) {
 	if o == nil || IsNil(o.Eligible) {
 		return nil, false
 	}
@@ -115,15 +115,15 @@ func (o *Dbv0038JobTime) HasEligible() bool {
 	return false
 }
 
-// SetEligible gets a reference to the given int32 and assigns it to the Eligible field.
-func (o *Dbv0038JobTime) SetEligible(v int32) {
+// SetEligible gets a reference to the given int64 and assigns it to the Eligible field.
+func (o *Dbv0038JobTime) SetEligible(v int64) {
 	o.Eligible = &v
 }
 
 // GetEnd returns the End field value if set, zero value otherwise.
-func (o *Dbv0038JobTime) GetEnd() int32 {
+func (o *Dbv0038JobTime) GetEnd() int64 {
 	if o == nil || IsNil(o.End) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.End
@@ -131,7 +131,7 @@ func (o *Dbv0038JobTime) GetEnd() int32 {
 
 // GetEndOk returns a tuple with the End field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobTime) GetEndOk() (*int32, bool) {
+func (o *Dbv0038JobTime) GetEndOk() (*int64, bool) {
 	if o == nil || IsNil(o.End) {
 		return nil, false
 	}
@@ -147,15 +147,15 @@ func (o *Dbv0038JobTime) HasEnd() bool {
 	return false
 }
 
-// SetEnd gets a reference to the given int32 and assigns it to the End field.
-func (o *Dbv0038JobTime) SetEnd(v int32) {
+// SetEnd gets a reference to the given int64 and assigns it to the End field.
+func (o *Dbv0038JobTime) SetEnd(v int64) {
 	o.End = &v
 }
 
 // GetStart returns the Start field value if set, zero value otherwise.
-func (o *Dbv0038JobTime) GetStart() int32 {
+func (o *Dbv0038JobTime) GetStart() int64 {
 	if o == nil || IsNil(o.Start) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Start
@@ -163,7 +163,7 @@ func (o *Dbv0038JobTime) GetStart() int32 {
 
 // GetStartOk returns a tuple with the Start field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobTime) GetStartOk() (*int32, bool) {
+func (o *Dbv0038JobTime) GetStartOk() (*int64, bool) {
 	if o == nil || IsNil(o.Start) {
 		return nil, false
 	}
@@ -179,15 +179,15 @@ func (o *Dbv0038JobTime) HasStart() bool {
 	return false
 }
 
-// SetStart gets a reference to the given int32 and assigns it to the Start field.
-func (o *Dbv0038JobTime) SetStart(v int32) {
+// SetStart gets a reference to the given int64 and assigns it to the Start field.
+func (o *Dbv0038JobTime) SetStart(v int64) {
 	o.Start = &v
 }
 
 // GetSubmission returns the Submission field value if set, zero value otherwise.
-func (o *Dbv0038JobTime) GetSubmission() int32 {
+func (o *Dbv0038JobTime) GetSubmission() int64 {
 	if o == nil || IsNil(o.Submission) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Submission
@@ -195,7 +195,7 @@ func (o *Dbv0038JobTime) GetSubmission() int32 {
 
 // GetSubmissionOk returns a tuple with the Submission field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobTime) GetSubmissionOk() (*int32, bool) {
+func (o *Dbv0038JobTime) GetSubmissionOk() (*int64, bool) {
 	if o == nil || IsNil(o.Submission) {
 		return nil, false
 	}
@@ -211,8 +211,8 @@ func (o *Dbv0038JobTime) HasSubmission() bool {
 	return false
 }
 
-// SetSubmission gets a reference to the given int32 and assigns it to the Submission field.
-func (o *Dbv0038JobTime) SetSubmission(v int32) {
+// SetSubmission gets a reference to the given int64 and assigns it to the Submission field.
+func (o *Dbv0038JobTime) SetSubmission(v int64) {
 	o.Submission = &v
 }
 

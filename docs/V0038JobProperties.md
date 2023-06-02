@@ -58,7 +58,7 @@ Name | Type | Description | Notes
 **Oversubscribe** | Pointer to **bool** | The job allocation can over-subscribe resources with other running jobs. | [optional] [default to false]
 **Partition** | Pointer to **string** | Request a specific partition for the resource allocation. | [optional] 
 **Prefer** | Pointer to **string** | Comma delimited list of features for scheduler to prefer but not a strict requirement like a constraint. Value can be used for job submission but is only displayed for PENDING jobs. | [optional] 
-**Priority** | Pointer to **string** | Request a specific job priority. | [optional] 
+**Priority** | Pointer to **int64** | Request a specific job priority. | [optional] 
 **Qos** | Pointer to **string** | Request a quality of service for the job. | [optional] 
 **Requeue** | Pointer to **bool** | Specifies that the batch job should eligible to being requeue. | [optional] 
 **Reservation** | Pointer to **string** | Allocate resources for the job from the named reservation. | [optional] 
@@ -1445,20 +1445,20 @@ HasPrefer returns a boolean if a field has been set.
 
 ### GetPriority
 
-`func (o *V0038JobProperties) GetPriority() string`
+`func (o *V0038JobProperties) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *V0038JobProperties) GetPriorityOk() (*string, bool)`
+`func (o *V0038JobProperties) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *V0038JobProperties) SetPriority(v string)`
+`func (o *V0038JobProperties) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

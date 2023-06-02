@@ -129,7 +129,7 @@ type V0038JobProperties struct {
 	// Comma delimited list of features for scheduler to prefer but not a strict requirement like a constraint. Value can be used for job submission but is only displayed for PENDING jobs.
 	Prefer *string `json:"prefer,omitempty"`
 	// Request a specific job priority.
-	Priority *string `json:"priority,omitempty"`
+	Priority *int64 `json:"priority,omitempty"`
 	// Request a quality of service for the job.
 	Qos *string `json:"qos,omitempty"`
 	// Specifies that the batch job should eligible to being requeue.
@@ -1917,9 +1917,9 @@ func (o *V0038JobProperties) SetPrefer(v string) {
 }
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
-func (o *V0038JobProperties) GetPriority() string {
+func (o *V0038JobProperties) GetPriority() int64 {
 	if o == nil || IsNil(o.Priority) {
-		var ret string
+		var ret int64
 		return ret
 	}
 	return *o.Priority
@@ -1927,7 +1927,7 @@ func (o *V0038JobProperties) GetPriority() string {
 
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *V0038JobProperties) GetPriorityOk() (*string, bool) {
+func (o *V0038JobProperties) GetPriorityOk() (*int64, bool) {
 	if o == nil || IsNil(o.Priority) {
 		return nil, false
 	}
@@ -1943,8 +1943,8 @@ func (o *V0038JobProperties) HasPriority() bool {
 	return false
 }
 
-// SetPriority gets a reference to the given string and assigns it to the Priority field.
-func (o *V0038JobProperties) SetPriority(v string) {
+// SetPriority gets a reference to the given int64 and assigns it to the Priority field.
+func (o *V0038JobProperties) SetPriority(v int64) {
 	o.Priority = &v
 }
 

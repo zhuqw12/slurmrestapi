@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Account** | Pointer to **string** | Account charged by job | [optional] 
 **Comment** | Pointer to [**Dbv0038JobComment**](Dbv0038JobComment.md) |  | [optional] 
-**AllocationNodes** | Pointer to **string** | Nodes allocated to job | [optional] 
+**AllocationNodes** | Pointer to **int32** | Nodes allocated to job | [optional] 
 **Array** | Pointer to [**Dbv0038JobArray**](Dbv0038JobArray.md) |  | [optional] 
 **Time** | Pointer to [**Dbv0038JobTime**](Dbv0038JobTime.md) |  | [optional] 
 **Association** | Pointer to [**Dbv0038AssociationShortInfo**](Dbv0038AssociationShortInfo.md) |  | [optional] 
@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **Mcs** | Pointer to [**Dbv0038JobMcs**](Dbv0038JobMcs.md) |  | [optional] 
 **Nodes** | Pointer to **string** | List of nodes allocated for job | [optional] 
 **Partition** | Pointer to **string** | Assigned job&#39;s partition | [optional] 
-**Priority** | Pointer to **int32** | Priority | [optional] 
+**Priority** | Pointer to **int64** | Priority | [optional] 
 **Qos** | Pointer to **string** | Assigned qos name | [optional] 
 **Required** | Pointer to [**Dbv0038JobRequired**](Dbv0038JobRequired.md) |  | [optional] 
 **KillRequestUser** | Pointer to **string** | User who requested job killed | [optional] 
@@ -106,20 +106,20 @@ HasComment returns a boolean if a field has been set.
 
 ### GetAllocationNodes
 
-`func (o *Dbv0038Job) GetAllocationNodes() string`
+`func (o *Dbv0038Job) GetAllocationNodes() int32`
 
 GetAllocationNodes returns the AllocationNodes field if non-nil, zero value otherwise.
 
 ### GetAllocationNodesOk
 
-`func (o *Dbv0038Job) GetAllocationNodesOk() (*string, bool)`
+`func (o *Dbv0038Job) GetAllocationNodesOk() (*int32, bool)`
 
 GetAllocationNodesOk returns a tuple with the AllocationNodes field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetAllocationNodes
 
-`func (o *Dbv0038Job) SetAllocationNodes(v string)`
+`func (o *Dbv0038Job) SetAllocationNodes(v int32)`
 
 SetAllocationNodes sets AllocationNodes field to given value.
 
@@ -506,20 +506,20 @@ HasPartition returns a boolean if a field has been set.
 
 ### GetPriority
 
-`func (o *Dbv0038Job) GetPriority() int32`
+`func (o *Dbv0038Job) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *Dbv0038Job) GetPriorityOk() (*int32, bool)`
+`func (o *Dbv0038Job) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *Dbv0038Job) SetPriority(v int32)`
+`func (o *Dbv0038Job) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

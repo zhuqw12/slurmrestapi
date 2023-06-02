@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **Min** | Pointer to [**Dbv0038AssociationMin**](Dbv0038AssociationMin.md) |  | [optional] 
 **ParentAccount** | Pointer to **string** | Parent account name | [optional] 
 **Partition** | Pointer to **string** | Assigned partition | [optional] 
-**Priority** | Pointer to **int32** | Assigned priority | [optional] 
+**Priority** | Pointer to **int64** | Assigned priority | [optional] 
 **SharesRaw** | Pointer to **int32** | Raw fairshare shares | [optional] 
 **Usage** | Pointer to [**Dbv0038AssociationUsage**](Dbv0038AssociationUsage.md) |  | [optional] 
 **User** | Pointer to **string** | Assigned user | [optional] 
@@ -239,20 +239,20 @@ HasPartition returns a boolean if a field has been set.
 
 ### GetPriority
 
-`func (o *Dbv0038Association) GetPriority() int32`
+`func (o *Dbv0038Association) GetPriority() int64`
 
 GetPriority returns the Priority field if non-nil, zero value otherwise.
 
 ### GetPriorityOk
 
-`func (o *Dbv0038Association) GetPriorityOk() (*int32, bool)`
+`func (o *Dbv0038Association) GetPriorityOk() (*int64, bool)`
 
 GetPriorityOk returns a tuple with the Priority field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetPriority
 
-`func (o *Dbv0038Association) SetPriority(v int32)`
+`func (o *Dbv0038Association) SetPriority(v int64)`
 
 SetPriority sets Priority field to given value.
 

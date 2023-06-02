@@ -2165,24 +2165,24 @@ components:
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           - start: 6
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           user: user
@@ -2197,24 +2197,24 @@ components:
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           - start: 6
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           user: user
@@ -2264,24 +2264,24 @@ components:
           id: 6
           TRES:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           allocated: 2
         - start: 6
           id: 6
           TRES:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           allocated: 2
         user: user
@@ -2689,51 +2689,51 @@ components:
           tres:
             total:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             minutes:
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               per:
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               node:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               job:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
           per:
             account:
@@ -2791,6 +2791,7 @@ components:
           type: string
         priority:
           description: Assigned priority
+          format: int64
           type: integer
         shares_raw:
           description: Raw fairshare shares
@@ -2819,51 +2820,51 @@ components:
             tres:
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               minutes:
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
               per:
                 node:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               account:
@@ -2903,51 +2904,51 @@ components:
             tres:
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               minutes:
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
               per:
                 node:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               account:
@@ -3030,12 +3031,12 @@ components:
               per:
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
           max:
             jobs:
@@ -3056,76 +3057,76 @@ components:
                 per:
                   qos:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   user:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   account:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
               per:
                 node:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 user:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 account:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
           factor: 7.457744773683766
         preempt:
@@ -3155,6 +3156,7 @@ components:
           $ref: '#/components/schemas/dbv0_0_38_qos_preempt'
         priority:
           description: QOS priority
+          format: int64
           type: integer
         usage_factor:
           description: Usage factor
@@ -3185,12 +3187,12 @@ components:
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             max:
               jobs:
@@ -3211,76 +3213,76 @@ components:
                   per:
                     qos:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     job:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     user:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     account:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                 per:
                   node:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   user:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   account:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             factor: 7.457744773683766
           preempt:
@@ -3307,12 +3309,12 @@ components:
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             max:
               jobs:
@@ -3333,76 +3335,76 @@ components:
                   per:
                     qos:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     job:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     user:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     account:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                 per:
                   node:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   user:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   account:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             factor: 7.457744773683766
           preempt:
@@ -3580,12 +3582,12 @@ components:
             type: type
         tres:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         errors:
         - description: description
@@ -3638,46 +3640,46 @@ components:
             partition: partition
             user: user
             account: account
-          allocation_nodes: allocation_nodes
+          allocation_nodes: 5
           working_directory: working_directory
           constraints: constraints
           required:
-            memory: 6
-            CPUs: 3
+            memory: 1
+            CPUs: 6
           partition: partition
           qos: qos
           array:
             task: task
-            job_id: 5
-            task_id: 7
+            job_id: 2
+            task_id: 9
             limits:
               max:
                 running:
-                  tasks: 2
+                  tasks: 7
           het:
-            job_id: 6
-            job_offset: 8
+            job_id: 8
+            job_offset: 9
           reservation:
-            name: 2
-            id: 1
+            name: 6
+            id: 2
           tres:
             requested:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           state:
             reason: reason
@@ -3690,7 +3692,7 @@ components:
             flags:
             - flags
             - flags
-          priority: 6
+          priority: 3
           steps:
           - nodes:
               count: 3
@@ -3700,7 +3702,7 @@ components:
               return_code: 9
               signal:
                 name: name
-                signal_id: 9
+                signal_id: 6
               status: status
             kill_request_user: kill_request_user
             CPU:
@@ -3708,121 +3710,121 @@ components:
               - governor
               - governor
               requested_frequency:
-                min: 7
-                max: 0
+                min: 0
+                max: 7
             pid: pid
             step:
-              job_id: 0
+              job_id: 4
               het:
-                component: 4
+                component: 8
               name: name
               id: id
             tres:
               consumed:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               requested:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               allocated:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             time:
               elapsed: 6
               total:
-                seconds: 6
-                microseconds: 7
+                seconds: 7
+                microseconds: 1
               system:
                 seconds: 1
-                microseconds: 1
-              start: 5
-              end: 6
+                microseconds: 6
+              start: 6
+              end: 5
               user:
-                seconds: 1
-                microseconds: 4
-              suspended: 6
+                seconds: 4
+                microseconds: 5
+              suspended: 3
             state: state
             tasks:
-              count: 3
+              count: 7
             statistics:
               CPU:
-                actual_frequency: 7
+                actual_frequency: 6
               energy:
-                consumed: 6
+                consumed: 0
           - nodes:
               count: 3
               range: range
@@ -3831,7 +3833,7 @@ components:
               return_code: 9
               signal:
                 name: name
-                signal_id: 9
+                signal_id: 6
               status: status
             kill_request_user: kill_request_user
             CPU:
@@ -3839,134 +3841,134 @@ components:
               - governor
               - governor
               requested_frequency:
-                min: 7
-                max: 0
+                min: 0
+                max: 7
             pid: pid
             step:
-              job_id: 0
+              job_id: 4
               het:
-                component: 4
+                component: 8
               name: name
               id: id
             tres:
               consumed:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               requested:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               allocated:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             time:
               elapsed: 6
               total:
-                seconds: 6
-                microseconds: 7
+                seconds: 7
+                microseconds: 1
               system:
                 seconds: 1
-                microseconds: 1
-              start: 5
-              end: 6
+                microseconds: 6
+              start: 6
+              end: 5
               user:
-                seconds: 1
-                microseconds: 4
-              suspended: 6
+                seconds: 4
+                microseconds: 5
+              suspended: 3
             state: state
             tasks:
-              count: 3
+              count: 7
             statistics:
               CPU:
-                actual_frequency: 7
+                actual_frequency: 6
               energy:
-                consumed: 6
+                consumed: 0
           derived_exit_code:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           nodes: nodes
-          job_id: 9
+          job_id: 6
           exit_code:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           name: name
           kill_request_user: kill_request_user
@@ -3975,21 +3977,21 @@ components:
             system: system
             job: job
           time:
-            elapsed: 9
+            elapsed: 3
             total:
-              seconds: 6
-              microseconds: 7
+              seconds: 7
+              microseconds: 1
             system:
               seconds: 1
-              microseconds: 1
-            eligible: 3
-            start: 4
-            limit: 5
-            end: 2
-            submission: 7
+              microseconds: 6
+            eligible: 2
+            start: 7
+            limit: 9
+            end: 4
+            submission: 1
             user:
-              seconds: 1
-              microseconds: 4
+              seconds: 4
+              microseconds: 5
             suspended: 1
           user: user
           account: account
@@ -4003,46 +4005,46 @@ components:
             partition: partition
             user: user
             account: account
-          allocation_nodes: allocation_nodes
+          allocation_nodes: 5
           working_directory: working_directory
           constraints: constraints
           required:
-            memory: 6
-            CPUs: 3
+            memory: 1
+            CPUs: 6
           partition: partition
           qos: qos
           array:
             task: task
-            job_id: 5
-            task_id: 7
+            job_id: 2
+            task_id: 9
             limits:
               max:
                 running:
-                  tasks: 2
+                  tasks: 7
           het:
-            job_id: 6
-            job_offset: 8
+            job_id: 8
+            job_offset: 9
           reservation:
-            name: 2
-            id: 1
+            name: 6
+            id: 2
           tres:
             requested:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           state:
             reason: reason
@@ -4055,7 +4057,7 @@ components:
             flags:
             - flags
             - flags
-          priority: 6
+          priority: 3
           steps:
           - nodes:
               count: 3
@@ -4065,7 +4067,7 @@ components:
               return_code: 9
               signal:
                 name: name
-                signal_id: 9
+                signal_id: 6
               status: status
             kill_request_user: kill_request_user
             CPU:
@@ -4073,121 +4075,121 @@ components:
               - governor
               - governor
               requested_frequency:
-                min: 7
-                max: 0
+                min: 0
+                max: 7
             pid: pid
             step:
-              job_id: 0
+              job_id: 4
               het:
-                component: 4
+                component: 8
               name: name
               id: id
             tres:
               consumed:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               requested:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               allocated:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             time:
               elapsed: 6
               total:
-                seconds: 6
-                microseconds: 7
+                seconds: 7
+                microseconds: 1
               system:
                 seconds: 1
-                microseconds: 1
-              start: 5
-              end: 6
+                microseconds: 6
+              start: 6
+              end: 5
               user:
-                seconds: 1
-                microseconds: 4
-              suspended: 6
+                seconds: 4
+                microseconds: 5
+              suspended: 3
             state: state
             tasks:
-              count: 3
+              count: 7
             statistics:
               CPU:
-                actual_frequency: 7
+                actual_frequency: 6
               energy:
-                consumed: 6
+                consumed: 0
           - nodes:
               count: 3
               range: range
@@ -4196,7 +4198,7 @@ components:
               return_code: 9
               signal:
                 name: name
-                signal_id: 9
+                signal_id: 6
               status: status
             kill_request_user: kill_request_user
             CPU:
@@ -4204,134 +4206,134 @@ components:
               - governor
               - governor
               requested_frequency:
-                min: 7
-                max: 0
+                min: 0
+                max: 7
             pid: pid
             step:
-              job_id: 0
+              job_id: 4
               het:
-                component: 4
+                component: 8
               name: name
               id: id
             tres:
               consumed:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               requested:
                 average:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 min:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 max:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
               allocated:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             time:
               elapsed: 6
               total:
-                seconds: 6
-                microseconds: 7
+                seconds: 7
+                microseconds: 1
               system:
                 seconds: 1
-                microseconds: 1
-              start: 5
-              end: 6
+                microseconds: 6
+              start: 6
+              end: 5
               user:
-                seconds: 1
-                microseconds: 4
-              suspended: 6
+                seconds: 4
+                microseconds: 5
+              suspended: 3
             state: state
             tasks:
-              count: 3
+              count: 7
             statistics:
               CPU:
-                actual_frequency: 7
+                actual_frequency: 6
               energy:
-                consumed: 6
+                consumed: 0
           derived_exit_code:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           nodes: nodes
-          job_id: 9
+          job_id: 6
           exit_code:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           name: name
           kill_request_user: kill_request_user
@@ -4340,21 +4342,21 @@ components:
             system: system
             job: job
           time:
-            elapsed: 9
+            elapsed: 3
             total:
-              seconds: 6
-              microseconds: 7
+              seconds: 7
+              microseconds: 1
             system:
               seconds: 1
-              microseconds: 1
-            eligible: 3
-            start: 4
-            limit: 5
-            end: 2
-            submission: 7
+              microseconds: 6
+            eligible: 2
+            start: 7
+            limit: 9
+            end: 4
+            submission: 1
             user:
-              seconds: 1
-              microseconds: 4
+              seconds: 4
+              microseconds: 5
             suspended: 1
           user: user
           account: account
@@ -4394,46 +4396,46 @@ components:
           partition: partition
           user: user
           account: account
-        allocation_nodes: allocation_nodes
+        allocation_nodes: 5
         working_directory: working_directory
         constraints: constraints
         required:
-          memory: 6
-          CPUs: 3
+          memory: 1
+          CPUs: 6
         partition: partition
         qos: qos
         array:
           task: task
-          job_id: 5
-          task_id: 7
+          job_id: 2
+          task_id: 9
           limits:
             max:
               running:
-                tasks: 2
+                tasks: 7
         het:
-          job_id: 6
-          job_offset: 8
+          job_id: 8
+          job_offset: 9
         reservation:
-          name: 2
-          id: 1
+          name: 6
+          id: 2
         tres:
           requested:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           allocated:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
         state:
           reason: reason
@@ -4446,7 +4448,7 @@ components:
           flags:
           - flags
           - flags
-        priority: 6
+        priority: 3
         steps:
         - nodes:
             count: 3
@@ -4456,7 +4458,7 @@ components:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           kill_request_user: kill_request_user
           CPU:
@@ -4464,121 +4466,121 @@ components:
             - governor
             - governor
             requested_frequency:
-              min: 7
-              max: 0
+              min: 0
+              max: 7
           pid: pid
           step:
-            job_id: 0
+            job_id: 4
             het:
-              component: 4
+              component: 8
             name: name
             id: id
           tres:
             consumed:
               average:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               min:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               max:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             requested:
               average:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               min:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               max:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             allocated:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           time:
             elapsed: 6
             total:
-              seconds: 6
-              microseconds: 7
+              seconds: 7
+              microseconds: 1
             system:
               seconds: 1
-              microseconds: 1
-            start: 5
-            end: 6
+              microseconds: 6
+            start: 6
+            end: 5
             user:
-              seconds: 1
-              microseconds: 4
-            suspended: 6
+              seconds: 4
+              microseconds: 5
+            suspended: 3
           state: state
           tasks:
-            count: 3
+            count: 7
           statistics:
             CPU:
-              actual_frequency: 7
+              actual_frequency: 6
             energy:
-              consumed: 6
+              consumed: 0
         - nodes:
             count: 3
             range: range
@@ -4587,7 +4589,7 @@ components:
             return_code: 9
             signal:
               name: name
-              signal_id: 9
+              signal_id: 6
             status: status
           kill_request_user: kill_request_user
           CPU:
@@ -4595,134 +4597,134 @@ components:
             - governor
             - governor
             requested_frequency:
-              min: 7
-              max: 0
+              min: 0
+              max: 7
           pid: pid
           step:
-            job_id: 0
+            job_id: 4
             het:
-              component: 4
+              component: 8
             name: name
             id: id
           tres:
             consumed:
               average:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               min:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               max:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             requested:
               average:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               min:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               max:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
             allocated:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           time:
             elapsed: 6
             total:
-              seconds: 6
-              microseconds: 7
+              seconds: 7
+              microseconds: 1
             system:
               seconds: 1
-              microseconds: 1
-            start: 5
-            end: 6
+              microseconds: 6
+            start: 6
+            end: 5
             user:
-              seconds: 1
-              microseconds: 4
-            suspended: 6
+              seconds: 4
+              microseconds: 5
+            suspended: 3
           state: state
           tasks:
-            count: 3
+            count: 7
           statistics:
             CPU:
-              actual_frequency: 7
+              actual_frequency: 6
             energy:
-              consumed: 6
+              consumed: 0
         derived_exit_code:
           return_code: 9
           signal:
             name: name
-            signal_id: 9
+            signal_id: 6
           status: status
         nodes: nodes
-        job_id: 9
+        job_id: 6
         exit_code:
           return_code: 9
           signal:
             name: name
-            signal_id: 9
+            signal_id: 6
           status: status
         name: name
         kill_request_user: kill_request_user
@@ -4731,21 +4733,21 @@ components:
           system: system
           job: job
         time:
-          elapsed: 9
+          elapsed: 3
           total:
-            seconds: 6
-            microseconds: 7
+            seconds: 7
+            microseconds: 1
           system:
             seconds: 1
-            microseconds: 1
-          eligible: 3
-          start: 4
-          limit: 5
-          end: 2
-          submission: 7
+            microseconds: 6
+          eligible: 2
+          start: 7
+          limit: 9
+          end: 4
+          submission: 1
           user:
-            seconds: 1
-            microseconds: 4
+            seconds: 4
+            microseconds: 5
           suspended: 1
         user: user
         account: account
@@ -4757,7 +4759,7 @@ components:
           $ref: '#/components/schemas/dbv0_0_38_job_comment'
         allocation_nodes:
           description: Nodes allocated to job
-          type: string
+          type: integer
         array:
           $ref: '#/components/schemas/dbv0_0_38_job_array'
         time:
@@ -4801,6 +4803,7 @@ components:
           type: string
         priority:
           description: Priority
+          format: int64
           type: integer
         qos:
           description: Assigned qos name
@@ -4838,7 +4841,7 @@ components:
         return_code: 9
         signal:
           name: name
-          signal_id: 9
+          signal_id: 6
         status: status
       properties:
         status:
@@ -4860,7 +4863,7 @@ components:
           return_code: 9
           signal:
             name: name
-            signal_id: 9
+            signal_id: 6
           status: status
         kill_request_user: kill_request_user
         CPU:
@@ -4868,121 +4871,121 @@ components:
           - governor
           - governor
           requested_frequency:
-            min: 7
-            max: 0
+            min: 0
+            max: 7
         pid: pid
         step:
-          job_id: 0
+          job_id: 4
           het:
-            component: 4
+            component: 8
           name: name
           id: id
         tres:
           consumed:
             average:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             total:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             min:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             max:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           requested:
             average:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             total:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             min:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             max:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
           allocated:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
         time:
           elapsed: 6
           total:
-            seconds: 6
-            microseconds: 7
+            seconds: 7
+            microseconds: 1
           system:
             seconds: 1
-            microseconds: 1
-          start: 5
-          end: 6
+            microseconds: 6
+          start: 6
+          end: 5
           user:
-            seconds: 1
-            microseconds: 4
-          suspended: 6
+            seconds: 4
+            microseconds: 5
+          suspended: 3
         state: state
         tasks:
-          count: 3
+          count: 7
         statistics:
           CPU:
-            actual_frequency: 7
+            actual_frequency: 6
           energy:
-            consumed: 6
+            consumed: 0
       properties:
         time:
           $ref: '#/components/schemas/dbv0_0_38_job_step_time'
@@ -5025,51 +5028,51 @@ components:
             tres:
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               minutes:
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
               per:
                 node:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               account:
@@ -5109,51 +5112,51 @@ components:
             tres:
               total:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               minutes:
                 total:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
               per:
                 node:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               account:
@@ -5201,12 +5204,12 @@ components:
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             max:
               jobs:
@@ -5227,76 +5230,76 @@ components:
                   per:
                     qos:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     job:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     user:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     account:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                 per:
                   node:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   user:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   account:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             factor: 7.457744773683766
           preempt:
@@ -5323,12 +5326,12 @@ components:
                 per:
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             max:
               jobs:
@@ -5349,76 +5352,76 @@ components:
                   per:
                     qos:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     job:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     user:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     account:
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                     - name: name
-                      count: 7
-                      id: 8
+                      count: 3
+                      id: 7
                       type: type
                 per:
                   node:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   job:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   user:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   account:
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
                   - name: name
-                    count: 7
-                    id: 8
+                    count: 3
+                    id: 7
                     type: type
             factor: 7.457744773683766
           preempt:
@@ -5441,24 +5444,24 @@ components:
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           - start: 6
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           user: user
@@ -5473,24 +5476,24 @@ components:
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           - start: 6
             id: 6
             TRES:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             allocated: 2
           user: user
@@ -5852,12 +5855,12 @@ components:
         id: 6
         TRES:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         allocated: 2
       properties:
@@ -6141,28 +6144,28 @@ components:
       type: object
     v0.0.38_partition:
       example:
-        max_time_limit: 7
+        max_time_limit: 9
         maximum_cpus_per_node: 5
-        over_time_limit: 3
+        over_time_limit: 2
         denied_accounts: denied_accounts
         flags:
         - flags
         - flags
-        maximum_memory_per_node: 5
-        total_cpus: 7
+        maximum_memory_per_node: 2
+        total_cpus: 1
         billing_weights: billing_weights
-        default_memory_per_cpu: 0
-        default_memory_per_node: 1
+        default_memory_per_cpu: 6
+        default_memory_per_node: 6
         allowed_qos: allowed_qos
-        min_nodes_per_job: 9
+        min_nodes_per_job: 3
         qos: qos
-        default_time_limit: 6
+        default_time_limit: 1
         denied_qos: denied_qos
-        priority_job_factor: 2
+        priority_job_factor: 4
         tres: tres
-        allowed_allocation_nodes: allowed_allocation_nodes
+        allowed_allocation_nodes: 0
         state: state
-        preemption_grace_time: 1
+        preemption_grace_time: 5
         allowed_accounts: allowed_accounts
         alternative: alternative
         preemption_mode:
@@ -6172,8 +6175,8 @@ components:
         name: name
         allowed_groups: allowed_groups
         total_nodes: 1
-        maximum_nodes_per_job: 2
-        priority_tier: 4
+        maximum_nodes_per_job: 7
+        priority_tier: 7
         maximum_memory_per_cpu: 1
       properties:
         flags:
@@ -6188,7 +6191,7 @@ components:
           type: array
         allowed_allocation_nodes:
           description: list names of allowed allocating nodes
-          type: string
+          type: integer
         allowed_accounts:
           description: comma delimited list of accounts
           type: string
@@ -6282,28 +6285,28 @@ components:
     v0.0.38_partitions_response:
       example:
         partitions:
-        - max_time_limit: 7
+        - max_time_limit: 9
           maximum_cpus_per_node: 5
-          over_time_limit: 3
+          over_time_limit: 2
           denied_accounts: denied_accounts
           flags:
           - flags
           - flags
-          maximum_memory_per_node: 5
-          total_cpus: 7
+          maximum_memory_per_node: 2
+          total_cpus: 1
           billing_weights: billing_weights
-          default_memory_per_cpu: 0
-          default_memory_per_node: 1
+          default_memory_per_cpu: 6
+          default_memory_per_node: 6
           allowed_qos: allowed_qos
-          min_nodes_per_job: 9
+          min_nodes_per_job: 3
           qos: qos
-          default_time_limit: 6
+          default_time_limit: 1
           denied_qos: denied_qos
-          priority_job_factor: 2
+          priority_job_factor: 4
           tres: tres
-          allowed_allocation_nodes: allowed_allocation_nodes
+          allowed_allocation_nodes: 0
           state: state
-          preemption_grace_time: 1
+          preemption_grace_time: 5
           allowed_accounts: allowed_accounts
           alternative: alternative
           preemption_mode:
@@ -6313,31 +6316,31 @@ components:
           name: name
           allowed_groups: allowed_groups
           total_nodes: 1
-          maximum_nodes_per_job: 2
-          priority_tier: 4
+          maximum_nodes_per_job: 7
+          priority_tier: 7
           maximum_memory_per_cpu: 1
-        - max_time_limit: 7
+        - max_time_limit: 9
           maximum_cpus_per_node: 5
-          over_time_limit: 3
+          over_time_limit: 2
           denied_accounts: denied_accounts
           flags:
           - flags
           - flags
-          maximum_memory_per_node: 5
-          total_cpus: 7
+          maximum_memory_per_node: 2
+          total_cpus: 1
           billing_weights: billing_weights
-          default_memory_per_cpu: 0
-          default_memory_per_node: 1
+          default_memory_per_cpu: 6
+          default_memory_per_node: 6
           allowed_qos: allowed_qos
-          min_nodes_per_job: 9
+          min_nodes_per_job: 3
           qos: qos
-          default_time_limit: 6
+          default_time_limit: 1
           denied_qos: denied_qos
-          priority_job_factor: 2
+          priority_job_factor: 4
           tres: tres
-          allowed_allocation_nodes: allowed_allocation_nodes
+          allowed_allocation_nodes: 0
           state: state
-          preemption_grace_time: 1
+          preemption_grace_time: 5
           allowed_accounts: allowed_accounts
           alternative: alternative
           preemption_mode:
@@ -6347,8 +6350,8 @@ components:
           name: name
           allowed_groups: allowed_groups
           total_nodes: 1
-          maximum_nodes_per_job: 2
-          priority_tier: 4
+          maximum_nodes_per_job: 7
+          priority_tier: 7
           maximum_memory_per_cpu: 1
         meta:
           Slurm:
@@ -7662,7 +7665,8 @@ components:
           type: string
         priority:
           description: Request a specific job priority.
-          type: string
+          format: int64
+          type: integer
         qos:
           description: Request a quality of service for the job.
           type: string
@@ -8304,21 +8308,21 @@ components:
       example:
         node:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         job:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         job:
@@ -8337,12 +8341,12 @@ components:
       example:
         job:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         job:
@@ -8356,22 +8360,22 @@ components:
       example:
         total:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         per:
           job:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
       properties:
         per:
@@ -8387,51 +8391,51 @@ components:
       example:
         total:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         minutes:
           total:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           per:
             job:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
         per:
           node:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           job:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
       properties:
         per:
@@ -8453,51 +8457,51 @@ components:
         tres:
           total:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           minutes:
             total:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             per:
               job:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
           per:
             node:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             job:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
         per:
           account:
@@ -8649,39 +8653,39 @@ components:
       example:
         qos:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         job:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         user:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         account:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         job:
@@ -8711,39 +8715,39 @@ components:
         per:
           qos:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           job:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           user:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           account:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
       properties:
         per:
@@ -8754,39 +8758,39 @@ components:
       example:
         node:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         job:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         user:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         account:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         account:
@@ -8817,76 +8821,76 @@ components:
           per:
             qos:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             job:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             user:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             account:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
         per:
           node:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           job:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           user:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           account:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
       properties:
         minutes:
@@ -8915,76 +8919,76 @@ components:
             per:
               qos:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               job:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               user:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               account:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
           per:
             node:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             job:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             user:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             account:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
       properties:
         wall_clock:
@@ -9001,12 +9005,12 @@ components:
       example:
         job:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         job:
@@ -9021,12 +9025,12 @@ components:
         per:
           job:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
       properties:
         per:
@@ -9040,12 +9044,12 @@ components:
           per:
             job:
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
             - name: name
-              count: 7
-              id: 8
+              count: 3
+              id: 7
               type: type
       properties:
         priority_threshold:
@@ -9063,12 +9067,12 @@ components:
             per:
               job:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
         max:
           jobs:
@@ -9089,76 +9093,76 @@ components:
               per:
                 qos:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 job:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 user:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 account:
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
                 - name: name
-                  count: 7
-                  id: 8
+                  count: 3
+                  id: 7
                   type: type
             per:
               node:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               job:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               user:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               account:
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
               - name: name
-                count: 7
-                id: 8
+                count: 3
+                id: 7
                 type: type
         factor: 7.457744773683766
       properties:
@@ -9200,8 +9204,8 @@ components:
     dbv0_0_38_tres_list_inner:
       example:
         name: name
-        count: 7
-        id: 8
+        count: 3
+        id: 7
         type: type
       properties:
         type:
@@ -9237,7 +9241,7 @@ components:
     dbv0_0_38_job_array_limits_max_running:
       description: Limits on array settings
       example:
-        tasks: 2
+        tasks: 7
       properties:
         tasks:
           description: Max running tasks in array at any one time
@@ -9247,7 +9251,7 @@ components:
       description: Limits on array settings
       example:
         running:
-          tasks: 2
+          tasks: 7
       properties:
         running:
           $ref: '#/components/schemas/dbv0_0_38_job_array_limits_max_running'
@@ -9257,7 +9261,7 @@ components:
       example:
         max:
           running:
-            tasks: 2
+            tasks: 7
       properties:
         max:
           $ref: '#/components/schemas/dbv0_0_38_job_array_limits_max'
@@ -9266,12 +9270,12 @@ components:
       description: Array properties (optional)
       example:
         task: task
-        job_id: 5
-        task_id: 7
+        job_id: 2
+        task_id: 9
         limits:
           max:
             running:
-              tasks: 2
+              tasks: 7
       properties:
         job_id:
           description: Job id of array
@@ -9289,7 +9293,7 @@ components:
       description: System time values
       example:
         seconds: 1
-        microseconds: 1
+        microseconds: 6
       properties:
         seconds:
           description: "Total number of CPU-seconds used by the system on behalf of\
@@ -9303,8 +9307,8 @@ components:
     dbv0_0_38_job_time_total:
       description: System time values
       example:
-        seconds: 6
-        microseconds: 7
+        seconds: 7
+        microseconds: 1
       properties:
         seconds:
           description: "Total number of CPU-seconds used by the job, in seconds"
@@ -9316,8 +9320,8 @@ components:
     dbv0_0_38_job_time_user:
       description: User land time values
       example:
-        seconds: 1
-        microseconds: 4
+        seconds: 4
+        microseconds: 5
       properties:
         seconds:
           description: "Total number of CPU-seconds used by the job in user land,\
@@ -9331,21 +9335,21 @@ components:
     dbv0_0_38_job_time:
       description: Time properties
       example:
-        elapsed: 9
+        elapsed: 3
         total:
-          seconds: 6
-          microseconds: 7
+          seconds: 7
+          microseconds: 1
         system:
           seconds: 1
-          microseconds: 1
-        eligible: 3
-        start: 4
-        limit: 5
-        end: 2
-        submission: 7
+          microseconds: 6
+        eligible: 2
+        start: 7
+        limit: 9
+        end: 4
+        submission: 1
         user:
-          seconds: 1
-          microseconds: 4
+          seconds: 4
+          microseconds: 5
         suspended: 1
       properties:
         elapsed:
@@ -9353,15 +9357,19 @@ components:
           type: integer
         eligible:
           description: Total time eligible to run
+          format: int64
           type: integer
         end:
           description: Timestamp of when job ended
+          format: int64
           type: integer
         start:
           description: Timestamp of when job started
+          format: int64
           type: integer
         submission:
           description: Timestamp of when job submitted
+          format: int64
           type: integer
         suspended:
           description: Timestamp of when job last suspended
@@ -9379,8 +9387,8 @@ components:
     dbv0_0_38_job_het:
       description: Heterogeneous Job details (optional)
       example:
-        job_id: 6
-        job_offset: 8
+        job_id: 8
+        job_offset: 9
       properties:
         job_id:
           description: Parent HetJob id
@@ -9401,8 +9409,8 @@ components:
     dbv0_0_38_job_required:
       description: Job run requirements
       example:
-        memory: 6
-        CPUs: 3
+        memory: 1
+        CPUs: 6
       properties:
         CPUs:
           description: Required number of CPUs
@@ -9414,8 +9422,8 @@ components:
     dbv0_0_38_job_reservation:
       description: Reservation usage details
       example:
-        name: 2
-        id: 1
+        name: 6
+        id: 2
       properties:
         id:
           description: Database id of reservation
@@ -9442,21 +9450,21 @@ components:
       example:
         requested:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         allocated:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         allocated:
@@ -9492,7 +9500,7 @@ components:
       description: Signal details (if signaled)
       example:
         name: name
-        signal_id: 9
+        signal_id: 6
       properties:
         signal_id:
           description: Signal number process received
@@ -9506,17 +9514,17 @@ components:
       example:
         elapsed: 6
         total:
-          seconds: 6
-          microseconds: 7
+          seconds: 7
+          microseconds: 1
         system:
           seconds: 1
-          microseconds: 1
-        start: 5
-        end: 6
+          microseconds: 6
+        start: 6
+        end: 5
         user:
-          seconds: 1
-          microseconds: 4
-        suspended: 6
+          seconds: 4
+          microseconds: 5
+        suspended: 3
       properties:
         elapsed:
           description: Total time elapsed
@@ -9553,7 +9561,7 @@ components:
     dbv0_0_38_job_step_tasks:
       description: Task properties
       example:
-        count: 3
+        count: 7
       properties:
         count:
           description: Number of tasks in step
@@ -9562,8 +9570,8 @@ components:
     dbv0_0_38_job_step_CPU_requested_frequency:
       description: CPU frequency requested
       example:
-        min: 7
-        max: 0
+        min: 0
+        max: 7
       properties:
         min:
           description: Min CPU frequency
@@ -9579,8 +9587,8 @@ components:
         - governor
         - governor
         requested_frequency:
-          min: 7
-          max: 0
+          min: 0
+          max: 7
       properties:
         requested_frequency:
           $ref: '#/components/schemas/dbv0_0_38_job_step_CPU_requested_frequency'
@@ -9594,7 +9602,7 @@ components:
     dbv0_0_38_job_step_statistics_CPU:
       description: Statistics of CPU
       example:
-        actual_frequency: 7
+        actual_frequency: 6
       properties:
         actual_frequency:
           description: Actual frequency of CPU during step
@@ -9603,7 +9611,7 @@ components:
     dbv0_0_38_job_step_statistics_energy:
       description: Statistics of energy
       example:
-        consumed: 6
+        consumed: 0
       properties:
         consumed:
           description: Energy consumed during step
@@ -9613,9 +9621,9 @@ components:
       description: Statistics of job step
       example:
         CPU:
-          actual_frequency: 7
+          actual_frequency: 6
         energy:
-          consumed: 6
+          consumed: 0
       properties:
         CPU:
           $ref: '#/components/schemas/dbv0_0_38_job_step_statistics_CPU'
@@ -9625,7 +9633,7 @@ components:
     dbv0_0_38_job_step_step_het:
       description: Heterogeneous job details
       example:
-        component: 4
+        component: 8
       properties:
         component:
           description: Parent HetJob component id
@@ -9634,9 +9642,9 @@ components:
     dbv0_0_38_job_step_step:
       description: Step details
       example:
-        job_id: 0
+        job_id: 4
         het:
-          component: 4
+          component: 8
         name: name
         id: id
       properties:
@@ -9657,39 +9665,39 @@ components:
       example:
         average:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         total:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         min:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         max:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         average:
@@ -9719,85 +9727,85 @@ components:
         consumed:
           average:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           total:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           min:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           max:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
         requested:
           average:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           total:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           min:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           max:
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
           - name: name
-            count: 7
-            id: 8
+            count: 3
+            id: 7
             type: type
         allocated:
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
         - name: name
-          count: 7
-          id: 8
+          count: 3
+          id: 7
           type: type
       properties:
         requested:

@@ -3494,6 +3494,7 @@
            },
            "priority": {
              "type": "integer",
+             "format": "int64",
              "description": "Assigned priority"
            },
            "shares_raw": {
@@ -3785,6 +3786,7 @@
            },
            "priority": {
              "type": "integer",
+             "format": "int64",
              "description": "QOS priority"
            },
            "usage_factor": {
@@ -4169,6 +4171,7 @@
            },
            "priority": {
              "type": "integer",
+             "format": "int64",
              "description": "Priority"
            },
            "qos": {
@@ -5198,7 +5201,7 @@
              }
            },
            "allowed_allocation_nodes": {
-             "type": "string",
+             "type": "integer",
              "description": "list names of allowed allocating nodes"
            },
            "allowed_accounts": {
@@ -6323,7 +6326,8 @@
              "description": "Comma delimited list of features for scheduler to prefer but not a strict requirement like a constraint. Value can be used for job submission but is only displayed for PENDING jobs."
            },
            "priority": {
-             "type": "string",
+             "type": "integer",
+             "format": "int64",
              "description": "Request a specific job priority."
            },
            "qos": {

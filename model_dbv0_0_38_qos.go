@@ -29,7 +29,7 @@ type Dbv0038Qos struct {
 	Limits  *Dbv0038QosLimits  `json:"limits,omitempty"`
 	Preempt *Dbv0038QosPreempt `json:"preempt,omitempty"`
 	// QOS priority
-	Priority *int32 `json:"priority,omitempty"`
+	Priority *int64 `json:"priority,omitempty"`
 	// Usage factor
 	UsageFactor *float32 `json:"usage_factor,omitempty"`
 	// Usage threshold
@@ -216,9 +216,9 @@ func (o *Dbv0038Qos) SetPreempt(v Dbv0038QosPreempt) {
 }
 
 // GetPriority returns the Priority field value if set, zero value otherwise.
-func (o *Dbv0038Qos) GetPriority() int32 {
+func (o *Dbv0038Qos) GetPriority() int64 {
 	if o == nil || IsNil(o.Priority) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.Priority
@@ -226,7 +226,7 @@ func (o *Dbv0038Qos) GetPriority() int32 {
 
 // GetPriorityOk returns a tuple with the Priority field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038Qos) GetPriorityOk() (*int32, bool) {
+func (o *Dbv0038Qos) GetPriorityOk() (*int64, bool) {
 	if o == nil || IsNil(o.Priority) {
 		return nil, false
 	}
@@ -242,8 +242,8 @@ func (o *Dbv0038Qos) HasPriority() bool {
 	return false
 }
 
-// SetPriority gets a reference to the given int32 and assigns it to the Priority field.
-func (o *Dbv0038Qos) SetPriority(v int32) {
+// SetPriority gets a reference to the given int64 and assigns it to the Priority field.
+func (o *Dbv0038Qos) SetPriority(v int64) {
 	o.Priority = &v
 }
 

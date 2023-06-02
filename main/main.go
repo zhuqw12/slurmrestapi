@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	openapiclient "github.com/zhuqw12/slurmrestapi"
 	"log"
@@ -92,9 +93,10 @@ func v0038GetDBJobs(client *openapiclient.APIClient) {
 	//fmt.Println(jobs)
 	for _, job := range jobs.GetJobs() {
 		//fmt.Println(job)
-		fmt.Printf("Job %d - %v\n", job.GetJobId(), job)
+		marshal, err := json.Marshal(job)
+		if err == nil {
+			fmt.Printf("Job %d - %s\n", job.GetJobId(), marshal)
+		}
 	}
 
-	job := client.SlurmAPI.SlurmV0038SubmitJob(context.Background())
-	client.SlurmAPI.SlurmV0038SubmitJobExecute(job)
 }
