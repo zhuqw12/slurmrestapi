@@ -21,10 +21,10 @@ func main() {
 		"X-SLURM-USER-TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwMDAwODQwODgsImlhdCI6MTY4NDcyNDA4OCwic3VuIjoicm9vdCJ9.3NoFEsowIPSvbjTXDJlN_fEIcIKh8VRGwOHb5LHd6o4"}
 
 	client := openapiclient.NewAPIClient(cfg)
-	//v0038JobSubmission(client)
+	v0038JobSubmission(client)
 
 	//v0038GetJobs(client)
-	//v0038GetJobID(client, "89")
+	v0038GetJobID(client, "149")
 	//v0038GetNodes(client)
 	//v0038GetNodeName(client, "phy0023")
 	//v0038GetPartitions(client)
@@ -32,8 +32,10 @@ func main() {
 
 	//v0038GetDBJobs(client)
 	//v0038GetDBJobID(client, "89")
-	v0038GetDBAccounts(client)
-	//v0038GetDBJobID(client, "89")
+	//v0038GetDBAccounts(client)
+	//v0038GetDBAccountName(client, "root")
+	//v0038GetDBUsers(client)
+	//v0038GetDBUserName(client, "wqtest")
 
 }
 
@@ -43,6 +45,7 @@ func v0038JobSubmission(client *openapiclient.APIClient) {
 	v0038JobProperties.SetQos("normal")
 	v0038JobProperties.SetTimeLimit(5)
 	v0038JobProperties.SetAccount("root")
+	v0038JobProperties.SetNodes([]int32{2, 2})
 	v0038JobSubmission := *openapiclient.NewV0038JobSubmission("\"echo 'Hello, world'\"") // V0038JobSubmission | submit new job
 	v0038JobSubmission.Job = v0038JobProperties
 	job := client.SlurmAPI.SlurmV0038SubmitJob(context.Background())
@@ -234,6 +237,66 @@ func v0038GetDBAccounts(client *openapiclient.APIClient) {
 		marshal, err := json.Marshal(account)
 		if err == nil {
 			fmt.Printf("Account %s [%s]\n", account.GetName(), marshal)
+		}
+	}
+}
+
+func v0038GetDBAccountName(client *openapiclient.APIClient, name string) {
+	fmt.Println("===================================GET Partitions=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetAccount(context.Background(), name)
+	accounts, resp, err := client.SlurmAPI.SlurmdbV0038GetAccountExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, account := range accounts.GetAccounts() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(account)
+		if err == nil {
+			fmt.Printf("Account %s [%s]\n", account.GetName(), marshal)
+		}
+	}
+}
+
+func v0038GetDBUsers(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Partitions=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetUsers(context.Background())
+	users, resp, err := client.SlurmAPI.SlurmdbV0038GetUsersExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, user := range users.GetUsers() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(user)
+		if err == nil {
+			fmt.Printf("user %s [%s]\n", user.GetName(), marshal)
+		}
+	}
+}
+
+func v0038GetDBUserName(client *openapiclient.APIClient, name string) {
+	fmt.Println("===================================GET Partitions=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetUser(context.Background(), name)
+	users, resp, err := client.SlurmAPI.SlurmdbV0038GetUserExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, user := range users.GetUsers() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(user)
+		if err == nil {
+			fmt.Printf("user %s [%s]\n", user.GetName(), marshal)
 		}
 	}
 }
