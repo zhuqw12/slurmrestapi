@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **KillRequestUser** | Pointer to **string** | User who requested job killed | [optional] 
 **State** | Pointer to **string** | State of job step | [optional] 
 **Statistics** | Pointer to [**Dbv0038JobStepStatistics**](Dbv0038JobStepStatistics.md) |  | [optional] 
-**Step** | Pointer to [**Dbv0038JobStepStep**](Dbv0038JobStepStep.md) |  | [optional] 
-**Task** | Pointer to **string** | Task distribution properties | [optional] 
-**Tres** | Pointer to [**Dbv0038JobStepTres**](Dbv0038JobStepTres.md) |  | [optional] 
+**Step** | Pointer to [**Dbv0038JobStepStep**](Dbv0038JobStepStep.md) |  | [optional]
+**Task** | Pointer to [**Dbv0038JobStepTask**](Dbv0038JobStepTask.md) |  | [optional]
+**Tres** | Pointer to [**Dbv0038JobStepTres**](Dbv0038JobStepTres.md) |  | [optional]
 
 ## Methods
 
@@ -288,20 +288,20 @@ HasStep returns a boolean if a field has been set.
 
 ### GetTask
 
-`func (o *Dbv0038JobStep) GetTask() string`
+`func (o *Dbv0038JobStep) GetTask() Dbv0038JobStepTask`
 
 GetTask returns the Task field if non-nil, zero value otherwise.
 
 ### GetTaskOk
 
-`func (o *Dbv0038JobStep) GetTaskOk() (*string, bool)`
+`func (o *Dbv0038JobStep) GetTaskOk() (*Dbv0038JobStepTask, bool)`
 
-GetTaskOk returns a tuple with the Task field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetTaskOk returns a tuple with the Task field if it's non-nil, zero value otherwise and a boolean to check if the value
+has been set.
 
 ### SetTask
 
-`func (o *Dbv0038JobStep) SetTask(v string)`
+`func (o *Dbv0038JobStep) SetTask(v Dbv0038JobStepTask)`
 
 SetTask sets Task field to given value.
 

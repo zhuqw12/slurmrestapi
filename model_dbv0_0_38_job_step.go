@@ -33,9 +33,8 @@ type Dbv0038JobStep struct {
 	State      *string                   `json:"state,omitempty"`
 	Statistics *Dbv0038JobStepStatistics `json:"statistics,omitempty"`
 	Step       *Dbv0038JobStepStep       `json:"step,omitempty"`
-	// Task distribution properties
-	Task *string             `json:"task,omitempty"`
-	Tres *Dbv0038JobStepTres `json:"tres,omitempty"`
+	Task       *Dbv0038JobStepTask       `json:"task,omitempty"`
+	Tres       *Dbv0038JobStepTres       `json:"tres,omitempty"`
 }
 
 // NewDbv0038JobStep instantiates a new Dbv0038JobStep object
@@ -376,9 +375,9 @@ func (o *Dbv0038JobStep) SetStep(v Dbv0038JobStepStep) {
 }
 
 // GetTask returns the Task field value if set, zero value otherwise.
-func (o *Dbv0038JobStep) GetTask() string {
+func (o *Dbv0038JobStep) GetTask() Dbv0038JobStepTask {
 	if o == nil || IsNil(o.Task) {
-		var ret string
+		var ret Dbv0038JobStepTask
 		return ret
 	}
 	return *o.Task
@@ -386,7 +385,7 @@ func (o *Dbv0038JobStep) GetTask() string {
 
 // GetTaskOk returns a tuple with the Task field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobStep) GetTaskOk() (*string, bool) {
+func (o *Dbv0038JobStep) GetTaskOk() (*Dbv0038JobStepTask, bool) {
 	if o == nil || IsNil(o.Task) {
 		return nil, false
 	}
@@ -402,8 +401,8 @@ func (o *Dbv0038JobStep) HasTask() bool {
 	return false
 }
 
-// SetTask gets a reference to the given string and assigns it to the Task field.
-func (o *Dbv0038JobStep) SetTask(v string) {
+// SetTask gets a reference to the given Dbv0038JobStepTask and assigns it to the Task field.
+func (o *Dbv0038JobStep) SetTask(v Dbv0038JobStepTask) {
 	o.Task = &v
 }
 

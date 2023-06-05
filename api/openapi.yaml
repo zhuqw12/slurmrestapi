@@ -3697,7 +3697,8 @@ components:
           - nodes:
               count: 3
               range: range
-            task: task
+            task:
+              distribution: distribution
             exit_code:
               return_code: 9
               signal:
@@ -3707,7 +3708,7 @@ components:
             kill_request_user: kill_request_user
             CPU:
               governor:
-              - governor
+                - governor
               - governor
               requested_frequency:
                 min: 0
@@ -3828,7 +3829,8 @@ components:
           - nodes:
               count: 3
               range: range
-            task: task
+            task:
+              distribution: distribution
             exit_code:
               return_code: 9
               signal:
@@ -3838,7 +3840,7 @@ components:
             kill_request_user: kill_request_user
             CPU:
               governor:
-              - governor
+                - governor
               - governor
               requested_frequency:
                 min: 0
@@ -4062,7 +4064,8 @@ components:
           - nodes:
               count: 3
               range: range
-            task: task
+            task:
+              distribution: distribution
             exit_code:
               return_code: 9
               signal:
@@ -4072,7 +4075,7 @@ components:
             kill_request_user: kill_request_user
             CPU:
               governor:
-              - governor
+                - governor
               - governor
               requested_frequency:
                 min: 0
@@ -4193,7 +4196,8 @@ components:
           - nodes:
               count: 3
               range: range
-            task: task
+            task:
+              distribution: distribution
             exit_code:
               return_code: 9
               signal:
@@ -4203,7 +4207,7 @@ components:
             kill_request_user: kill_request_user
             CPU:
               governor:
-              - governor
+                - governor
               - governor
               requested_frequency:
                 min: 0
@@ -4453,7 +4457,8 @@ components:
         - nodes:
             count: 3
             range: range
-          task: task
+          task:
+            distribution: distribution
           exit_code:
             return_code: 9
             signal:
@@ -4463,7 +4468,7 @@ components:
           kill_request_user: kill_request_user
           CPU:
             governor:
-            - governor
+              - governor
             - governor
             requested_frequency:
               min: 0
@@ -4584,7 +4589,8 @@ components:
         - nodes:
             count: 3
             range: range
-          task: task
+          task:
+            distribution: distribution
           exit_code:
             return_code: 9
             signal:
@@ -4594,7 +4600,7 @@ components:
           kill_request_user: kill_request_user
           CPU:
             governor:
-            - governor
+              - governor
             - governor
             requested_frequency:
               min: 0
@@ -4858,7 +4864,8 @@ components:
         nodes:
           count: 3
           range: range
-        task: task
+        task:
+          distribution: distribution
         exit_code:
           return_code: 9
           signal:
@@ -4868,7 +4875,7 @@ components:
         kill_request_user: kill_request_user
         CPU:
           governor:
-          - governor
+            - governor
           - governor
           requested_frequency:
             min: 0
@@ -5011,8 +5018,7 @@ components:
         step:
           $ref: '#/components/schemas/dbv0_0_38_job_step_step'
         task:
-          description: Task distribution properties
-          type: string
+          $ref: '#/components/schemas/dbv0_0_38_job_step_task'
         tres:
           $ref: '#/components/schemas/dbv0_0_38_job_step_tres'
       type: object
@@ -9660,14 +9666,23 @@ components:
           description: Step name
           type: string
       type: object
+    dbv0_0_38_job_step_task:
+      description: task details
+      example:
+        distribution: distribution
+      properties:
+        distribution:
+          description: distribution
+          type: string
+      type: object
     dbv0_0_38_job_step_tres_requested:
       description: TRES requested for job
       example:
         average:
-        - name: name
-          count: 3
-          id: 7
-          type: type
+          - name: name
+            count: 3
+            id: 7
+            type: type
         - name: name
           count: 3
           id: 7

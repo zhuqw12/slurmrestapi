@@ -63,6 +63,7 @@ docs/Dbv0038JobStepStatisticsCPU.md
 docs/Dbv0038JobStepStatisticsEnergy.md
 docs/Dbv0038JobStepStep.md
 docs/Dbv0038JobStepStepHet.md
+docs/Dbv0038JobStepTask.md
 docs/Dbv0038JobStepTasks.md
 docs/Dbv0038JobStepTime.md
 docs/Dbv0038JobStepTres.md
@@ -208,6 +209,7 @@ model_dbv0_0_38_job_step_statistics_cpu.go
 model_dbv0_0_38_job_step_statistics_energy.go
 model_dbv0_0_38_job_step_step.go
 model_dbv0_0_38_job_step_step_het.go
+model_dbv0_0_38_job_step_task.go
 model_dbv0_0_38_job_step_tasks.go
 model_dbv0_0_38_job_step_time.go
 model_dbv0_0_38_job_step_tres.go
