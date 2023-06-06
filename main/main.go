@@ -21,10 +21,10 @@ func main() {
 		"X-SLURM-USER-TOKEN": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjIwMDAwODQwODgsImlhdCI6MTY4NDcyNDA4OCwic3VuIjoicm9vdCJ9.3NoFEsowIPSvbjTXDJlN_fEIcIKh8VRGwOHb5LHd6o4"}
 
 	client := openapiclient.NewAPIClient(cfg)
-	v0038JobSubmission(client)
+	//v0038JobSubmission(client)
 
 	//v0038GetJobs(client)
-	v0038GetJobID(client, "149")
+	//v0038GetJobID(client, "149")
 	//v0038GetNodes(client)
 	//v0038GetNodeName(client, "phy0023")
 	//v0038GetPartitions(client)
@@ -36,7 +36,7 @@ func main() {
 	//v0038GetDBAccountName(client, "root")
 	//v0038GetDBUsers(client)
 	//v0038GetDBUserName(client, "wqtest")
-
+	v0038GetDBQos(client)
 }
 
 func v0038JobSubmission(client *openapiclient.APIClient) {
@@ -297,6 +297,26 @@ func v0038GetDBUserName(client *openapiclient.APIClient, name string) {
 		marshal, err := json.Marshal(user)
 		if err == nil {
 			fmt.Printf("user %s [%s]\n", user.GetName(), marshal)
+		}
+	}
+}
+
+func v0038GetDBQos(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Qos=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetQos(context.Background())
+	qoss, resp, err := client.SlurmAPI.SlurmdbV0038GetQosExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, qos := range qoss.GetQos() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(qos)
+		if err == nil {
+			fmt.Printf("qos %s [%s]\n", qos.GetName(), marshal)
 		}
 	}
 }

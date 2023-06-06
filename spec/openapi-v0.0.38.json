@@ -3600,7 +3600,7 @@
              }
            },
            "id": {
-             "type": "string",
+             "type": "integer",
              "description": "Database id"
            },
            "limits": {

@@ -5,9 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Description** | Pointer to **string** | QOS description | [optional] 
-**Flags** | Pointer to **[]string** | List of properties of QOS | [optional] 
-**Id** | Pointer to **string** | Database id | [optional] 
-**Limits** | Pointer to [**Dbv0038QosLimits**](Dbv0038QosLimits.md) |  | [optional] 
+**Flags** | Pointer to **[]string** | List of properties of QOS | [optional]
+**Id** | Pointer to **int32** | Database id | [optional]
+**Limits** | Pointer to [**Dbv0038QosLimits**](Dbv0038QosLimits.md) |  | [optional]
 **Preempt** | Pointer to [**Dbv0038QosPreempt**](Dbv0038QosPreempt.md) |  | [optional] 
 **Priority** | Pointer to **int64** | QOS priority | [optional] 
 **UsageFactor** | Pointer to **float32** | Usage factor | [optional] 
@@ -85,20 +85,20 @@ HasFlags returns a boolean if a field has been set.
 
 ### GetId
 
-`func (o *Dbv0038Qos) GetId() string`
+`func (o *Dbv0038Qos) GetId() int32`
 
 GetId returns the Id field if non-nil, zero value otherwise.
 
 ### GetIdOk
 
-`func (o *Dbv0038Qos) GetIdOk() (*string, bool)`
+`func (o *Dbv0038Qos) GetIdOk() (*int32, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise and a boolean to check if the value has
+been set.
 
 ### SetId
 
-`func (o *Dbv0038Qos) SetId(v string)`
+`func (o *Dbv0038Qos) SetId(v int32)`
 
 SetId sets Id field to given value.
 

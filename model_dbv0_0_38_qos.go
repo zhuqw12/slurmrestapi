@@ -25,7 +25,7 @@ type Dbv0038Qos struct {
 	// List of properties of QOS
 	Flags []string `json:"flags,omitempty"`
 	// Database id
-	Id      *string            `json:"id,omitempty"`
+	Id      *int32             `json:"id,omitempty"`
 	Limits  *Dbv0038QosLimits  `json:"limits,omitempty"`
 	Preempt *Dbv0038QosPreempt `json:"preempt,omitempty"`
 	// QOS priority
@@ -120,9 +120,9 @@ func (o *Dbv0038Qos) SetFlags(v []string) {
 }
 
 // GetId returns the Id field value if set, zero value otherwise.
-func (o *Dbv0038Qos) GetId() string {
+func (o *Dbv0038Qos) GetId() int32 {
 	if o == nil || IsNil(o.Id) {
-		var ret string
+		var ret int32
 		return ret
 	}
 	return *o.Id
@@ -130,7 +130,7 @@ func (o *Dbv0038Qos) GetId() string {
 
 // GetIdOk returns a tuple with the Id field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038Qos) GetIdOk() (*string, bool) {
+func (o *Dbv0038Qos) GetIdOk() (*int32, bool) {
 	if o == nil || IsNil(o.Id) {
 		return nil, false
 	}
@@ -146,8 +146,8 @@ func (o *Dbv0038Qos) HasId() bool {
 	return false
 }
 
-// SetId gets a reference to the given string and assigns it to the Id field.
-func (o *Dbv0038Qos) SetId(v string) {
+// SetId gets a reference to the given int32 and assigns it to the Id field.
+func (o *Dbv0038Qos) SetId(v int32) {
 	o.Id = &v
 }
 
