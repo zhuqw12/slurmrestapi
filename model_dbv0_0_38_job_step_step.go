@@ -23,8 +23,6 @@ type Dbv0038JobStepStep struct {
 	// Parent job id
 	JobId *int32                 `json:"job_id,omitempty"`
 	Het   *Dbv0038JobStepStepHet `json:"het,omitempty"`
-	// Step id
-	Id *string `json:"id,omitempty"`
 	// Step name
 	Name *string `json:"name,omitempty"`
 }
@@ -110,38 +108,6 @@ func (o *Dbv0038JobStepStep) SetHet(v Dbv0038JobStepStepHet) {
 	o.Het = &v
 }
 
-// GetId returns the Id field value if set, zero value otherwise.
-func (o *Dbv0038JobStepStep) GetId() string {
-	if o == nil || IsNil(o.Id) {
-		var ret string
-		return ret
-	}
-	return *o.Id
-}
-
-// GetIdOk returns a tuple with the Id field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038JobStepStep) GetIdOk() (*string, bool) {
-	if o == nil || IsNil(o.Id) {
-		return nil, false
-	}
-	return o.Id, true
-}
-
-// HasId returns a boolean if a field has been set.
-func (o *Dbv0038JobStepStep) HasId() bool {
-	if o != nil && !IsNil(o.Id) {
-		return true
-	}
-
-	return false
-}
-
-// SetId gets a reference to the given string and assigns it to the Id field.
-func (o *Dbv0038JobStepStep) SetId(v string) {
-	o.Id = &v
-}
-
 // GetName returns the Name field value if set, zero value otherwise.
 func (o *Dbv0038JobStepStep) GetName() string {
 	if o == nil || IsNil(o.Name) {
@@ -189,9 +155,6 @@ func (o Dbv0038JobStepStep) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Het) {
 		toSerialize["het"] = o.Het
-	}
-	if !IsNil(o.Id) {
-		toSerialize["id"] = o.Id
 	}
 	if !IsNil(o.Name) {
 		toSerialize["name"] = o.Name

@@ -21,7 +21,7 @@ var _ MappedNullable = &Dbv0038JobStepStatisticsCPU{}
 // Dbv0038JobStepStatisticsCPU Statistics of CPU
 type Dbv0038JobStepStatisticsCPU struct {
 	// Actual frequency of CPU during step
-	ActualFrequency *int32 `json:"actual_frequency,omitempty"`
+	ActualFrequency *int64 `json:"actual_frequency,omitempty"`
 }
 
 // NewDbv0038JobStepStatisticsCPU instantiates a new Dbv0038JobStepStatisticsCPU object
@@ -42,9 +42,9 @@ func NewDbv0038JobStepStatisticsCPUWithDefaults() *Dbv0038JobStepStatisticsCPU {
 }
 
 // GetActualFrequency returns the ActualFrequency field value if set, zero value otherwise.
-func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequency() int32 {
+func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequency() int64 {
 	if o == nil || IsNil(o.ActualFrequency) {
-		var ret int32
+		var ret int64
 		return ret
 	}
 	return *o.ActualFrequency
@@ -52,7 +52,7 @@ func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequency() int32 {
 
 // GetActualFrequencyOk returns a tuple with the ActualFrequency field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequencyOk() (*int32, bool) {
+func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequencyOk() (*int64, bool) {
 	if o == nil || IsNil(o.ActualFrequency) {
 		return nil, false
 	}
@@ -68,8 +68,8 @@ func (o *Dbv0038JobStepStatisticsCPU) HasActualFrequency() bool {
 	return false
 }
 
-// SetActualFrequency gets a reference to the given int32 and assigns it to the ActualFrequency field.
-func (o *Dbv0038JobStepStatisticsCPU) SetActualFrequency(v int32) {
+// SetActualFrequency gets a reference to the given int64 and assigns it to the ActualFrequency field.
+func (o *Dbv0038JobStepStatisticsCPU) SetActualFrequency(v int64) {
 	o.ActualFrequency = &v
 }
 

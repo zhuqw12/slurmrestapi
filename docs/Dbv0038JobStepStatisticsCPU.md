@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ActualFrequency** | Pointer to **int32** | Actual frequency of CPU during step | [optional] 
+**ActualFrequency** | Pointer to **int64** | Actual frequency of CPU during step | [optional]
 
 ## Methods
 
@@ -27,20 +27,20 @@ but it doesn't guarantee that properties required by API are set
 
 ### GetActualFrequency
 
-`func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequency() int32`
+`func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequency() int64`
 
 GetActualFrequency returns the ActualFrequency field if non-nil, zero value otherwise.
 
 ### GetActualFrequencyOk
 
-`func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequencyOk() (*int32, bool)`
+`func (o *Dbv0038JobStepStatisticsCPU) GetActualFrequencyOk() (*int64, bool)`
 
-GetActualFrequencyOk returns a tuple with the ActualFrequency field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetActualFrequencyOk returns a tuple with the ActualFrequency field if it's non-nil, zero value otherwise and a boolean
+to check if the value has been set.
 
 ### SetActualFrequency
 
-`func (o *Dbv0038JobStepStatisticsCPU) SetActualFrequency(v int32)`
+`func (o *Dbv0038JobStepStatisticsCPU) SetActualFrequency(v int64)`
 
 SetActualFrequency sets ActualFrequency field to given value.
 

@@ -23,28 +23,29 @@ func main() {
 	client := openapiclient.NewAPIClient(cfg)
 	//v0038JobSubmission(client)
 
-	v0038GetJobs(client)
-	v0038GetJobID(client, "89")
-	v0038GetNodes(client)
-	v0038GetNodeName(client, "phy0023")
-	v0038GetPartitions(client)
-	v0038GetPartitionName(client, "compute")
-	v0038GetReservations(client)
-
-	v0038GetDBAccounts(client)
-	v0038GetDBAccountName(client, "root")
-	v0038GetDBAssociations(client)
-	v0038GetDBClusters(client)
-	v0038GetDBClusterByName(client, "zcycluster")
-	v0038GetDBConfig(client)
+	v0038Diag(client)
+	//v0038GetJobs(client)
+	//v0038GetJobID(client, "89")
+	//v0038GetNodes(client)
+	//v0038GetNodeName(client, "phy0023")
+	//v0038GetPartitions(client)
+	//v0038GetPartitionName(client, "compute")
+	//v0038GetReservations(client)
+	//
+	//v0038GetDBAccounts(client)
+	//v0038GetDBAccountName(client, "root")
+	//v0038GetDBAssociations(client)
+	//v0038GetDBClusters(client)
+	//v0038GetDBClusterByName(client, "zcycluster")
+	//v0038GetDBConfig(client)
 	v0038GetDBJobs(client)
-	v0038GetDBJobID(client, "89")
-	v0038GetDBQos(client)
-	v0038GetDBQosByName(client, "normal")
-	v0038GetDBTres(client)
-	v0038GetDBUsers(client)
-	v0038GetDBUserName(client, "wqtest")
-	v0038GetDBWckeys(client)
+	//v0038GetDBJobID(client, "89")
+	//v0038GetDBQos(client)
+	//v0038GetDBQosByName(client, "normal")
+	//v0038GetDBTres(client)
+	//v0038GetDBUsers(client)
+	//v0038GetDBUserName(client, "wqtest")
+	//v0038GetDBWckeys(client)
 }
 
 func v0038JobSubmission(client *openapiclient.APIClient) {
@@ -66,6 +67,23 @@ func v0038JobSubmission(client *openapiclient.APIClient) {
 	}
 	// response from `SlurmV0038SubmitJob`: V0038JobSubmissionResponse
 	fmt.Printf("Job %d - %s\n", resp.GetJobId(), resp.GetJobSubmitUserMsg())
+}
+
+func v0038Diag(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Diag=====================================")
+	jreq := client.SlurmAPI.SlurmV0038Diag(context.Background())
+	diag, resp, err := client.SlurmAPI.SlurmV0038DiagExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(job)
+	marshal, err := json.Marshal(diag)
+	if err == nil {
+		fmt.Printf("diag [%s]\n", marshal)
+	}
 }
 
 func v0038GetJobs(client *openapiclient.APIClient) {
@@ -111,7 +129,7 @@ func v0038GetJobID(client *openapiclient.APIClient, id string) {
 func v0038GetDBJobs(client *openapiclient.APIClient) {
 	fmt.Println("===================================GET DB Jobs=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetJobs(context.Background())
-	jreq = jreq.StartTime("2023-06-01").EndTime("2023-06-02")
+	jreq = jreq.StartTime("2023-05-01").EndTime("2023-06-02")
 
 	jobs, resp, err := client.SlurmAPI.SlurmdbV0038GetJobsExecute(jreq)
 	if err != nil {

@@ -4464,6 +4464,7 @@
                  "properties": {
                    "actual_frequency": {
                      "type": "integer",
+                     "format": "int64",
                      "description": "Actual frequency of CPU during step"
                    }
                  }
@@ -4497,10 +4498,6 @@
                      "description": "Parent HetJob component id"
                    }
                  }
-               },
-               "id": {
-                 "type": "string",
-                 "description": "Step id"
                },
                "name": {
                  "type": "string",

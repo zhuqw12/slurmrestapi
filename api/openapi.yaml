@@ -3114,12 +3114,12 @@ components:
                   qos:
                     - name: name
                       count: 3
-                    id: 7
-                    type: type
-                  - name: name
-                    count: 3
-                    id: 7
-                    type: type
+                      id: 7
+                      type: type
+                    - name: name
+                      count: 3
+                      id: 7
+                      type: type
                   job:
                   - name: name
                     count: 3
@@ -3392,12 +3392,12 @@ components:
                     qos:
                       - name: name
                         count: 3
-                      id: 7
-                      type: type
-                    - name: name
-                      count: 3
-                      id: 7
-                      type: type
+                        id: 7
+                        type: type
+                      - name: name
+                        count: 3
+                        id: 7
+                        type: type
                     job:
                     - name: name
                       count: 3
@@ -3775,7 +3775,6 @@ components:
               het:
                 component: 8
               name: name
-              id: id
             tres:
               consumed:
                 average:
@@ -3907,7 +3906,6 @@ components:
               het:
                 component: 8
               name: name
-              id: id
             tres:
               consumed:
                 average:
@@ -4142,7 +4140,6 @@ components:
               het:
                 component: 8
               name: name
-              id: id
             tres:
               consumed:
                 average:
@@ -4274,7 +4271,6 @@ components:
               het:
                 component: 8
               name: name
-              id: id
             tres:
               consumed:
                 average:
@@ -4535,7 +4531,6 @@ components:
             het:
               component: 8
             name: name
-            id: id
           tres:
             consumed:
               average:
@@ -4667,7 +4662,6 @@ components:
             het:
               component: 8
             name: name
-            id: id
           tres:
             consumed:
               average:
@@ -4942,7 +4936,6 @@ components:
           het:
             component: 8
           name: name
-          id: id
         tres:
           consumed:
             average:
@@ -5689,16 +5682,16 @@ components:
                 partition: partition
                 user: user
                 account: account
-          default:
-            wckey: wckey
-            account: account
-          administrator_level: administrator_level
-          coordinators:
-          - name: name
-            direct: 1
-          - name: name
-            direct: 1
-          flags:
+            default:
+              wckey: wckey
+              account: account
+            administrator_level: administrator_level
+            coordinators:
+              - name: name
+                direct: 1
+              - name: name
+                direct: 1
+            flags:
           - flags
           - flags
           name: name
@@ -9044,12 +9037,12 @@ components:
               qos:
                 - name: name
                   count: 3
-                id: 7
-                type: type
-              - name: name
-                count: 3
-                id: 7
-                type: type
+                  id: 7
+                  type: type
+                - name: name
+                  count: 3
+                  id: 7
+                  type: type
               job:
               - name: name
                 count: 3
@@ -9218,12 +9211,12 @@ components:
                 qos:
                   - name: name
                     count: 3
-                  id: 7
-                  type: type
-                - name: name
-                  count: 3
-                  id: 7
-                  type: type
+                    id: 7
+                    type: type
+                  - name: name
+                    count: 3
+                    id: 7
+                    type: type
                 job:
                 - name: name
                   count: 3
@@ -9730,6 +9723,7 @@ components:
       properties:
         actual_frequency:
           description: Actual frequency of CPU during step
+          format: int64
           type: integer
       type: object
     dbv0_0_38_job_step_statistics_energy:
@@ -9770,16 +9764,12 @@ components:
         het:
           component: 8
         name: name
-        id: id
       properties:
         job_id:
           description: Parent job id
           type: integer
         het:
           $ref: '#/components/schemas/dbv0_0_38_job_step_step_het'
-        id:
-          description: Step id
-          type: string
         name:
           description: Step name
           type: string

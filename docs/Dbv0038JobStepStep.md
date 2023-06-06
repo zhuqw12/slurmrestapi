@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **JobId** | Pointer to **int32** | Parent job id | [optional] 
 **Het** | Pointer to [**Dbv0038JobStepStepHet**](Dbv0038JobStepStepHet.md) |  | [optional] 
-**Id** | Pointer to **string** | Step id | [optional] 
 **Name** | Pointer to **string** | Step name | [optional] 
 
 ## Methods
@@ -77,31 +76,6 @@ SetHet sets Het field to given value.
 `func (o *Dbv0038JobStepStep) HasHet() bool`
 
 HasHet returns a boolean if a field has been set.
-
-### GetId
-
-`func (o *Dbv0038JobStepStep) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *Dbv0038JobStepStep) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *Dbv0038JobStepStep) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *Dbv0038JobStepStep) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetName
 
