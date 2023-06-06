@@ -23,8 +23,10 @@ type Dbv0038ConfigInfo struct {
 	Meta *Dbv0038Meta `json:"meta,omitempty"`
 	// Slurm errors
 	Errors []Dbv0038Error `json:"errors,omitempty"`
-	// Array of TRES
-	Tres [][]Dbv0038TresListInner `json:"tres,omitempty"`
+	// Array of jobs
+	Clusters []Dbv0038Cluster `json:"clusters,omitempty"`
+	// TRES list of attributes
+	Tres []Dbv0038TresListInner `json:"tres,omitempty"`
 	// Array of accounts
 	Accounts []Dbv0038Account `json:"accounts,omitempty"`
 	// Array of associations
@@ -118,10 +120,42 @@ func (o *Dbv0038ConfigInfo) SetErrors(v []Dbv0038Error) {
 	o.Errors = v
 }
 
+// GetClusters returns the Clusters field value if set, zero value otherwise.
+func (o *Dbv0038ConfigInfo) GetClusters() []Dbv0038Cluster {
+	if o == nil || IsNil(o.Clusters) {
+		var ret []Dbv0038Cluster
+		return ret
+	}
+	return o.Clusters
+}
+
+// GetClustersOk returns a tuple with the Clusters field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *Dbv0038ConfigInfo) GetClustersOk() ([]Dbv0038Cluster, bool) {
+	if o == nil || IsNil(o.Clusters) {
+		return nil, false
+	}
+	return o.Clusters, true
+}
+
+// HasClusters returns a boolean if a field has been set.
+func (o *Dbv0038ConfigInfo) HasClusters() bool {
+	if o != nil && !IsNil(o.Clusters) {
+		return true
+	}
+
+	return false
+}
+
+// SetClusters gets a reference to the given []Dbv0038Cluster and assigns it to the Clusters field.
+func (o *Dbv0038ConfigInfo) SetClusters(v []Dbv0038Cluster) {
+	o.Clusters = v
+}
+
 // GetTres returns the Tres field value if set, zero value otherwise.
-func (o *Dbv0038ConfigInfo) GetTres() [][]Dbv0038TresListInner {
+func (o *Dbv0038ConfigInfo) GetTres() []Dbv0038TresListInner {
 	if o == nil || IsNil(o.Tres) {
-		var ret [][]Dbv0038TresListInner
+		var ret []Dbv0038TresListInner
 		return ret
 	}
 	return o.Tres
@@ -129,7 +163,7 @@ func (o *Dbv0038ConfigInfo) GetTres() [][]Dbv0038TresListInner {
 
 // GetTresOk returns a tuple with the Tres field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038ConfigInfo) GetTresOk() ([][]Dbv0038TresListInner, bool) {
+func (o *Dbv0038ConfigInfo) GetTresOk() ([]Dbv0038TresListInner, bool) {
 	if o == nil || IsNil(o.Tres) {
 		return nil, false
 	}
@@ -145,8 +179,8 @@ func (o *Dbv0038ConfigInfo) HasTres() bool {
 	return false
 }
 
-// SetTres gets a reference to the given [][]Dbv0038TresListInner and assigns it to the Tres field.
-func (o *Dbv0038ConfigInfo) SetTres(v [][]Dbv0038TresListInner) {
+// SetTres gets a reference to the given []Dbv0038TresListInner and assigns it to the Tres field.
+func (o *Dbv0038ConfigInfo) SetTres(v []Dbv0038TresListInner) {
 	o.Tres = v
 }
 
@@ -325,6 +359,9 @@ func (o Dbv0038ConfigInfo) ToMap() (map[string]interface{}, error) {
 	}
 	if !IsNil(o.Errors) {
 		toSerialize["errors"] = o.Errors
+	}
+	if !IsNil(o.Clusters) {
+		toSerialize["clusters"] = o.Clusters
 	}
 	if !IsNil(o.Tres) {
 		toSerialize["tres"] = o.Tres

@@ -1946,9 +1946,9 @@ components:
           account: account
         coordinators:
         - name: name
-          direct: 0
+          direct: 1
         - name: name
-          direct: 0
+          direct: 1
         organization: organization
         name: name
         flags:
@@ -2006,9 +2006,9 @@ components:
             account: account
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           organization: organization
           name: name
           flags:
@@ -2026,9 +2026,9 @@ components:
             account: account
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           organization: organization
           name: name
           flags:
@@ -2061,7 +2061,7 @@ components:
     dbv0.0.38_coordinator_info:
       example:
         name: name
-        direct: 0
+        direct: 1
       properties:
         name:
           description: Name of user
@@ -2159,9 +2159,9 @@ components:
           flags:
           - flags
           - flags
-          id: 2
+          id: 6
           accounting:
-            - start: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -2172,8 +2172,8 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
-            - start: 5
+              allocated: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -2184,16 +2184,16 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
+              allocated: 5
           user: user
         - cluster: cluster
           name: name
           flags:
           - flags
           - flags
-          id: 2
+          id: 6
           accounting:
-            - start: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -2204,8 +2204,8 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
-            - start: 5
+              allocated: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -2216,7 +2216,7 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
+              allocated: 5
           user: user
         meta:
           Slurm:
@@ -2258,9 +2258,9 @@ components:
         flags:
         - flags
         - flags
-        id: 2
+        id: 6
         accounting:
-          - start: 5
+          - start: 3
             id: 6
             TRES:
               - name: name
@@ -2271,8 +2271,8 @@ components:
                 count: 3
                 id: 7
                 type: type
-            allocated: 6
-          - start: 5
+            allocated: 5
+          - start: 3
             id: 6
             TRES:
               - name: name
@@ -2283,7 +2283,7 @@ components:
                 count: 3
                 id: 7
                 type: type
-            allocated: 6
+            allocated: 5
         user: user
       properties:
         cluster:
@@ -2372,6 +2372,92 @@ components:
       type: object
     dbv0.0.38_cluster_info:
       example:
+        meta:
+          Slurm:
+            release: release
+            version:
+              major: 0
+              minor: 1
+              micro: 6
+          plugin:
+            name: name
+            type: type
+        errors:
+          - description: description
+            source: source
+            error: error
+            error_number: 5
+          - description: description
+            source: source
+            error: error
+            error_number: 5
+        clusters:
+          - associations:
+              root:
+                cluster: cluster
+                partition: partition
+                user: user
+                account: account
+            controller:
+              port: 0
+              host: host
+            nodes: nodes
+            flags:
+              - flags
+              - flags
+            name: name
+            rpc_version: 6
+            tres:
+              - name: name
+                count: 3
+                id: 7
+                type: type
+              - name: name
+                count: 3
+                id: 7
+                type: type
+            select_plugin: select_plugin
+          - associations:
+              root:
+                cluster: cluster
+                partition: partition
+                user: user
+                account: account
+            controller:
+              port: 0
+              host: host
+            nodes: nodes
+            flags:
+              - flags
+              - flags
+            name: name
+            rpc_version: 6
+            tres:
+              - name: name
+                count: 3
+                id: 7
+                type: type
+              - name: name
+                count: 3
+                id: 7
+                type: type
+            select_plugin: select_plugin
+      properties:
+        meta:
+          $ref: '#/components/schemas/dbv0.0.38_meta'
+        errors:
+          description: Slurm errors
+          items:
+            $ref: '#/components/schemas/dbv0.0.38_error'
+          type: array
+        clusters:
+          description: Array of jobs
+          items:
+            $ref: '#/components/schemas/dbv0.0.38_cluster'
+          type: array
+      type: object
+    dbv0.0.38_cluster:
+      example:
         associations:
           root:
             cluster: cluster
@@ -2383,53 +2469,23 @@ components:
           host: host
         nodes: nodes
         flags:
-        - flags
-        - flags
+          - flags
+          - flags
         name: name
         rpc_version: 6
         tres:
-        - meta:
-            Slurm:
-              release: release
-              version:
-                major: 0
-                minor: 1
-                micro: 6
-            plugin:
-              name: name
-              type: type
-          errors:
-          - description: description
-            source: source
-            error: error
-            error_number: 5
-          - description: description
-            source: source
-            error: error
-            error_number: 5
-        - meta:
-            Slurm:
-              release: release
-              version:
-                major: 0
-                minor: 1
-                micro: 6
-            plugin:
-              name: name
-              type: type
-          errors:
-          - description: description
-            source: source
-            error: error
-            error_number: 5
-          - description: description
-            source: source
-            error: error
-            error_number: 5
+          - name: name
+            count: 3
+            id: 7
+            type: type
+          - name: name
+            count: 3
+            id: 7
+            type: type
         select_plugin: select_plugin
       properties:
         controller:
-          $ref: '#/components/schemas/dbv0_0_38_cluster_info_controller'
+          $ref: '#/components/schemas/dbv0_0_38_cluster_controller'
         flags:
           description: List of properties of cluster
           items:
@@ -2446,14 +2502,14 @@ components:
           description: Configured select plugin
           type: string
         associations:
-          $ref: '#/components/schemas/dbv0_0_38_cluster_info_associations'
+          $ref: '#/components/schemas/dbv0_0_38_cluster_associations'
         rpc_version:
           description: Number rpc version
           type: integer
         tres:
-          description: List of TRES in cluster
+          description: TRES list of attributes
           items:
-            $ref: '#/components/schemas/dbv0.0.38_response_tres'
+            $ref: '#/components/schemas/dbv0_0_38_tres_list_inner'
           type: array
       type: object
     dbv0.0.38_response_cluster_delete:
@@ -2534,9 +2590,9 @@ components:
         administrator_level: administrator_level
         coordinators:
         - name: name
-          direct: 0
+          direct: 1
         - name: name
-          direct: 0
+          direct: 1
         flags:
         - flags
         - flags
@@ -2604,9 +2660,9 @@ components:
           administrator_level: administrator_level
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           flags:
           - flags
           - flags
@@ -2626,9 +2682,9 @@ components:
           administrator_level: administrator_level
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           flags:
           - flags
           - flags
@@ -2681,11 +2737,11 @@ components:
       description: Association description
       example:
         cluster: cluster
-        shares_raw: 2
+        shares_raw: 9
         max:
           jobs:
             per:
-              wall_clock: 6
+              wall_clock: 5
           tres:
             total:
             - name: name
@@ -2737,27 +2793,27 @@ components:
                 type: type
           per:
             account:
-              wall_clock: 1
+              wall_clock: 5
         usage:
-          fairshare_factor: 3.616076749251911
-          normalized_shares: 7.386281948385884
-          effective_normalized_usage: 1.2315135367772556
-          job_count: 1
-          group_used_wallclock: 9.301444243932576
-          normalized_priority: 4
-          accrue_job_count: 7
-          fairshare_shares: 2
-          fairshare_level: 6.84685269835264
-          raw_usage: 1
+          fairshare_factor: 4.145608029883936
+          normalized_shares: 1.0246457001441578
+          effective_normalized_usage: 1.4894159098541704
+          job_count: 7
+          group_used_wallclock: 2.027123023002322
+          normalized_priority: 1
+          accrue_job_count: 3
+          fairshare_shares: 7
+          fairshare_level: 1.1730742509559433
+          raw_usage: 6
         flags:
         - flags
         - flags
-        priority: 5
+        priority: 7
         parent_account: parent_account
         default:
           qos: qos
         min:
-          priority_threshold: 5
+          priority_threshold: 2
         partition: partition
         QOS:
         - QOS
@@ -2812,11 +2868,11 @@ components:
       example:
         associations:
         - cluster: cluster
-          shares_raw: 2
+          shares_raw: 9
           max:
             jobs:
               per:
-                wall_clock: 6
+                wall_clock: 5
             tres:
               total:
               - name: name
@@ -2868,27 +2924,27 @@ components:
                   type: type
             per:
               account:
-                wall_clock: 1
+                wall_clock: 5
           usage:
-            fairshare_factor: 3.616076749251911
-            normalized_shares: 7.386281948385884
-            effective_normalized_usage: 1.2315135367772556
-            job_count: 1
-            group_used_wallclock: 9.301444243932576
-            normalized_priority: 4
-            accrue_job_count: 7
-            fairshare_shares: 2
-            fairshare_level: 6.84685269835264
-            raw_usage: 1
+            fairshare_factor: 4.145608029883936
+            normalized_shares: 1.0246457001441578
+            effective_normalized_usage: 1.4894159098541704
+            job_count: 7
+            group_used_wallclock: 2.027123023002322
+            normalized_priority: 1
+            accrue_job_count: 3
+            fairshare_shares: 7
+            fairshare_level: 1.1730742509559433
+            raw_usage: 6
           flags:
           - flags
           - flags
-          priority: 5
+          priority: 7
           parent_account: parent_account
           default:
             qos: qos
           min:
-            priority_threshold: 5
+            priority_threshold: 2
           partition: partition
           QOS:
           - QOS
@@ -2896,11 +2952,11 @@ components:
           user: user
           account: account
         - cluster: cluster
-          shares_raw: 2
+          shares_raw: 9
           max:
             jobs:
               per:
-                wall_clock: 6
+                wall_clock: 5
             tres:
               total:
               - name: name
@@ -2952,27 +3008,27 @@ components:
                   type: type
             per:
               account:
-                wall_clock: 1
+                wall_clock: 5
           usage:
-            fairshare_factor: 3.616076749251911
-            normalized_shares: 7.386281948385884
-            effective_normalized_usage: 1.2315135367772556
-            job_count: 1
-            group_used_wallclock: 9.301444243932576
-            normalized_priority: 4
-            accrue_job_count: 7
-            fairshare_shares: 2
-            fairshare_level: 6.84685269835264
-            raw_usage: 1
+            fairshare_factor: 4.145608029883936
+            normalized_shares: 1.0246457001441578
+            effective_normalized_usage: 1.4894159098541704
+            job_count: 7
+            group_used_wallclock: 2.027123023002322
+            normalized_priority: 1
+            accrue_job_count: 3
+            fairshare_shares: 7
+            fairshare_level: 1.1730742509559433
+            raw_usage: 6
           flags:
           - flags
           - flags
-          priority: 5
+          priority: 7
           parent_account: parent_account
           default:
             qos: qos
           min:
-            priority_threshold: 5
+            priority_threshold: 2
           partition: partition
           QOS:
           - QOS
@@ -3018,15 +3074,15 @@ components:
         flags:
           - flags
           - flags
-        usage_threshold: 1.284659006116532
+        usage_threshold: 6.778324963048013
         name: name
         description: description
-        usage_factor: 6.965117697638846
-        id: 7
-        priority: 3
+        usage_factor: 2.8841621266687802
+        id: 4
+        priority: 1
         limits:
           min:
-            priority_threshold: 9
+            priority_threshold: 3
             tres:
               per:
                 job:
@@ -3034,30 +3090,30 @@ components:
                     count: 3
                     id: 7
                     type: type
-                - name: name
-                  count: 3
-                  id: 7
-                  type: type
+                  - name: name
+                    count: 3
+                    id: 7
+                    type: type
           max:
             jobs:
               active_jobs:
                 per:
-                  user: 9
-                  account: 9
+                  user: 8
+                  account: 6
             accruing:
               per:
-                user: 8
-                account: 6
+                user: 6
+                account: 9
             wall_clock:
               per:
-                qos: 4
-                job: 5
+                qos: 9
+                job: 9
             tres:
               minutes:
                 per:
                   qos:
-                  - name: name
-                    count: 3
+                    - name: name
+                      count: 3
                     id: 7
                     type: type
                   - name: name
@@ -3128,7 +3184,7 @@ components:
                   count: 3
                   id: 7
                   type: type
-          factor: 1.1730742509559433
+          factor: 5.025004791520295
         preempt:
           mode:
           - mode
@@ -3174,15 +3230,15 @@ components:
         - flags:
             - flags
             - flags
-          usage_threshold: 1.284659006116532
+          usage_threshold: 6.778324963048013
           name: name
           description: description
-          usage_factor: 6.965117697638846
-          id: 7
-          priority: 3
+          usage_factor: 2.8841621266687802
+          id: 4
+          priority: 1
           limits:
             min:
-              priority_threshold: 9
+              priority_threshold: 3
               tres:
                 per:
                   job:
@@ -3190,24 +3246,24 @@ components:
                       count: 3
                       id: 7
                       type: type
-                  - name: name
-                    count: 3
-                    id: 7
-                    type: type
+                    - name: name
+                      count: 3
+                      id: 7
+                      type: type
             max:
               jobs:
                 active_jobs:
                   per:
-                    user: 9
-                    account: 9
+                    user: 8
+                    account: 6
               accruing:
                 per:
-                  user: 8
-                  account: 6
+                  user: 6
+                  account: 9
               wall_clock:
                 per:
-                  qos: 4
-                  job: 5
+                  qos: 9
+                  job: 9
               tres:
                 minutes:
                   per:
@@ -3284,7 +3340,7 @@ components:
                     count: 3
                     id: 7
                     type: type
-            factor: 1.1730742509559433
+            factor: 5.025004791520295
           preempt:
             mode:
             - mode
@@ -3296,15 +3352,15 @@ components:
         - flags:
             - flags
             - flags
-          usage_threshold: 1.284659006116532
+          usage_threshold: 6.778324963048013
           name: name
           description: description
-          usage_factor: 6.965117697638846
-          id: 7
-          priority: 3
+          usage_factor: 2.8841621266687802
+          id: 4
+          priority: 1
           limits:
             min:
-              priority_threshold: 9
+              priority_threshold: 3
               tres:
                 per:
                   job:
@@ -3312,30 +3368,30 @@ components:
                       count: 3
                       id: 7
                       type: type
-                  - name: name
-                    count: 3
-                    id: 7
-                    type: type
+                    - name: name
+                      count: 3
+                      id: 7
+                      type: type
             max:
               jobs:
                 active_jobs:
                   per:
-                    user: 9
-                    account: 9
+                    user: 8
+                    account: 6
               accruing:
                 per:
-                  user: 8
-                  account: 6
+                  user: 6
+                  account: 9
               wall_clock:
                 per:
-                  qos: 4
-                  job: 5
+                  qos: 9
+                  job: 9
               tres:
                 minutes:
                   per:
                     qos:
-                    - name: name
-                      count: 3
+                      - name: name
+                        count: 3
                       id: 7
                       type: type
                     - name: name
@@ -3406,7 +3462,7 @@ components:
                     count: 3
                     id: 7
                     type: type
-            factor: 1.1730742509559433
+            factor: 5.025004791520295
           preempt:
             mode:
             - mode
@@ -5026,11 +5082,11 @@ components:
       example:
         associations:
         - cluster: cluster
-          shares_raw: 2
+          shares_raw: 9
           max:
             jobs:
               per:
-                wall_clock: 6
+                wall_clock: 5
             tres:
               total:
               - name: name
@@ -5082,27 +5138,27 @@ components:
                   type: type
             per:
               account:
-                wall_clock: 1
+                wall_clock: 5
           usage:
-            fairshare_factor: 3.616076749251911
-            normalized_shares: 7.386281948385884
-            effective_normalized_usage: 1.2315135367772556
-            job_count: 1
-            group_used_wallclock: 9.301444243932576
-            normalized_priority: 4
-            accrue_job_count: 7
-            fairshare_shares: 2
-            fairshare_level: 6.84685269835264
-            raw_usage: 1
+            fairshare_factor: 4.145608029883936
+            normalized_shares: 1.0246457001441578
+            effective_normalized_usage: 1.4894159098541704
+            job_count: 7
+            group_used_wallclock: 2.027123023002322
+            normalized_priority: 1
+            accrue_job_count: 3
+            fairshare_shares: 7
+            fairshare_level: 1.1730742509559433
+            raw_usage: 6
           flags:
           - flags
           - flags
-          priority: 5
+          priority: 7
           parent_account: parent_account
           default:
             qos: qos
           min:
-            priority_threshold: 5
+            priority_threshold: 2
           partition: partition
           QOS:
           - QOS
@@ -5110,11 +5166,11 @@ components:
           user: user
           account: account
         - cluster: cluster
-          shares_raw: 2
+          shares_raw: 9
           max:
             jobs:
               per:
-                wall_clock: 6
+                wall_clock: 5
             tres:
               total:
               - name: name
@@ -5166,27 +5222,27 @@ components:
                   type: type
             per:
               account:
-                wall_clock: 1
+                wall_clock: 5
           usage:
-            fairshare_factor: 3.616076749251911
-            normalized_shares: 7.386281948385884
-            effective_normalized_usage: 1.2315135367772556
-            job_count: 1
-            group_used_wallclock: 9.301444243932576
-            normalized_priority: 4
-            accrue_job_count: 7
-            fairshare_shares: 2
-            fairshare_level: 6.84685269835264
-            raw_usage: 1
+            fairshare_factor: 4.145608029883936
+            normalized_shares: 1.0246457001441578
+            effective_normalized_usage: 1.4894159098541704
+            job_count: 7
+            group_used_wallclock: 2.027123023002322
+            normalized_priority: 1
+            accrue_job_count: 3
+            fairshare_shares: 7
+            fairshare_level: 1.1730742509559433
+            raw_usage: 6
           flags:
           - flags
           - flags
-          priority: 5
+          priority: 7
           parent_account: parent_account
           default:
             qos: qos
           min:
-            priority_threshold: 5
+            priority_threshold: 2
           partition: partition
           QOS:
           - QOS
@@ -5197,15 +5253,15 @@ components:
         - flags:
             - flags
             - flags
-          usage_threshold: 1.284659006116532
+          usage_threshold: 6.778324963048013
           name: name
           description: description
-          usage_factor: 6.965117697638846
-          id: 7
-          priority: 3
+          usage_factor: 2.8841621266687802
+          id: 4
+          priority: 1
           limits:
             min:
-              priority_threshold: 9
+              priority_threshold: 3
               tres:
                 per:
                   job:
@@ -5213,24 +5269,24 @@ components:
                       count: 3
                       id: 7
                       type: type
-                  - name: name
-                    count: 3
-                    id: 7
-                    type: type
+                    - name: name
+                      count: 3
+                      id: 7
+                      type: type
             max:
               jobs:
                 active_jobs:
                   per:
-                    user: 9
-                    account: 9
+                    user: 8
+                    account: 6
               accruing:
                 per:
-                  user: 8
-                  account: 6
+                  user: 6
+                  account: 9
               wall_clock:
                 per:
-                  qos: 4
-                  job: 5
+                  qos: 9
+                  job: 9
               tres:
                 minutes:
                   per:
@@ -5307,7 +5363,7 @@ components:
                     count: 3
                     id: 7
                     type: type
-            factor: 1.1730742509559433
+            factor: 5.025004791520295
           preempt:
             mode:
             - mode
@@ -5319,15 +5375,15 @@ components:
         - flags:
             - flags
             - flags
-          usage_threshold: 1.284659006116532
+          usage_threshold: 6.778324963048013
           name: name
           description: description
-          usage_factor: 6.965117697638846
-          id: 7
-          priority: 3
+          usage_factor: 2.8841621266687802
+          id: 4
+          priority: 1
           limits:
             min:
-              priority_threshold: 9
+              priority_threshold: 3
               tres:
                 per:
                   job:
@@ -5335,24 +5391,24 @@ components:
                       count: 3
                       id: 7
                       type: type
-                  - name: name
-                    count: 3
-                    id: 7
-                    type: type
+                    - name: name
+                      count: 3
+                      id: 7
+                      type: type
             max:
               jobs:
                 active_jobs:
                   per:
-                    user: 9
-                    account: 9
+                    user: 8
+                    account: 6
               accruing:
                 per:
-                  user: 8
-                  account: 6
+                  user: 6
+                  account: 9
               wall_clock:
                 per:
-                  qos: 4
-                  job: 5
+                  qos: 9
+                  job: 9
               tres:
                 minutes:
                   per:
@@ -5429,7 +5485,7 @@ components:
                     count: 3
                     id: 7
                     type: type
-            factor: 1.1730742509559433
+            factor: 5.025004791520295
           preempt:
             mode:
             - mode
@@ -5444,9 +5500,9 @@ components:
           flags:
           - flags
           - flags
-          id: 2
+          id: 6
           accounting:
-            - start: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -5457,8 +5513,8 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
-            - start: 5
+              allocated: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -5469,16 +5525,16 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
+              allocated: 5
           user: user
         - cluster: cluster
           name: name
           flags:
           - flags
           - flags
-          id: 2
+          id: 6
           accounting:
-            - start: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -5489,8 +5545,8 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
-            - start: 5
+              allocated: 5
+            - start: 3
               id: 6
               TRES:
                 - name: name
@@ -5501,7 +5557,7 @@ components:
                   count: 3
                   id: 7
                   type: type
-              allocated: 6
+              allocated: 5
           user: user
         meta:
           Slurm:
@@ -5514,8 +5570,14 @@ components:
             name: name
             type: type
         tres:
-        - null
-        - null
+          - name: name
+            count: 3
+            id: 7
+            type: type
+          - name: name
+            count: 3
+            id: 7
+            type: type
         accounts:
         - associations:
           - cluster: cluster
@@ -5528,9 +5590,9 @@ components:
             account: account
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           organization: organization
           name: name
           flags:
@@ -5548,9 +5610,9 @@ components:
             account: account
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           organization: organization
           name: name
           flags:
@@ -5558,33 +5620,84 @@ components:
           - flags
           description: description
         errors:
-        - description: description
-          source: source
-          error: error
-          error_number: 5
-        - description: description
-          source: source
-          error: error
-          error_number: 5
+          - description: description
+            source: source
+            error: error
+            error_number: 5
+          - description: description
+            source: source
+            error: error
+            error_number: 5
+        clusters:
+          - associations:
+              root:
+                cluster: cluster
+                partition: partition
+                user: user
+                account: account
+            controller:
+              port: 0
+              host: host
+            nodes: nodes
+            flags:
+              - flags
+              - flags
+            name: name
+            rpc_version: 6
+            tres:
+              - name: name
+                count: 3
+                id: 7
+                type: type
+              - name: name
+                count: 3
+                id: 7
+                type: type
+            select_plugin: select_plugin
+          - associations:
+              root:
+                cluster: cluster
+                partition: partition
+                user: user
+                account: account
+            controller:
+              port: 0
+              host: host
+            nodes: nodes
+            flags:
+              - flags
+              - flags
+            name: name
+            rpc_version: 6
+            tres:
+              - name: name
+                count: 3
+                id: 7
+                type: type
+              - name: name
+                count: 3
+                id: 7
+                type: type
+            select_plugin: select_plugin
         users:
-        - associations:
-          - cluster: cluster
-            partition: partition
-            user: user
-            account: account
-          - cluster: cluster
-            partition: partition
-            user: user
-            account: account
+          - associations:
+              - cluster: cluster
+                partition: partition
+                user: user
+                account: account
+              - cluster: cluster
+                partition: partition
+                user: user
+                account: account
           default:
             wckey: wckey
             account: account
           administrator_level: administrator_level
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           flags:
           - flags
           - flags
@@ -5604,9 +5717,9 @@ components:
           administrator_level: administrator_level
           coordinators:
           - name: name
-            direct: 0
+            direct: 1
           - name: name
-            direct: 0
+            direct: 1
           flags:
           - flags
           - flags
@@ -5619,10 +5732,15 @@ components:
           items:
             $ref: '#/components/schemas/dbv0.0.38_error'
           type: array
-        tres:
-          description: Array of TRES
+        clusters:
+          description: Array of jobs
           items:
-            $ref: '#/components/schemas/dbv0.0.38_tres_list'
+            $ref: '#/components/schemas/dbv0.0.38_cluster'
+          type: array
+        tres:
+          description: TRES list of attributes
+          items:
+            $ref: '#/components/schemas/dbv0_0_38_tres_list_inner'
           type: array
         accounts:
           description: Array of accounts
@@ -5857,7 +5975,7 @@ components:
       type: object
     dbv0.0.38_accounting:
       example:
-        start: 5
+        start: 3
         id: 6
         TRES:
         - name: name
@@ -5868,7 +5986,7 @@ components:
           count: 3
           id: 7
           type: type
-        allocated: 6
+        allocated: 5
       properties:
         allocated:
           description: total seconds allocated
@@ -8226,7 +8344,7 @@ components:
             $ref: '#/components/schemas/dbv0_0_38_diag_statistics_users_inner'
           type: array
       type: object
-    dbv0_0_38_cluster_info_controller:
+    dbv0_0_38_cluster_controller:
       description: Information about controller
       example:
         port: 0
@@ -8239,7 +8357,7 @@ components:
           description: Port number
           type: integer
       type: object
-    dbv0_0_38_cluster_info_associations:
+    dbv0_0_38_cluster_associations:
       description: Information about associations
       example:
         root:
@@ -8276,7 +8394,7 @@ components:
     dbv0_0_38_association_max_jobs_per:
       description: Max jobs per settings
       example:
-        wall_clock: 6
+        wall_clock: 5
       properties:
         wall_clock:
           description: Max wallclock per job
@@ -8286,7 +8404,7 @@ components:
       description: Max jobs settings
       example:
         per:
-          wall_clock: 6
+          wall_clock: 5
       properties:
         per:
           $ref: '#/components/schemas/dbv0_0_38_association_max_jobs_per'
@@ -8294,7 +8412,7 @@ components:
     dbv0_0_38_association_max_per_account:
       description: Max per accounting settings
       example:
-        wall_clock: 1
+        wall_clock: 5
       properties:
         wall_clock:
           description: Max wallclock per account
@@ -8304,7 +8422,7 @@ components:
       description: Max per settings
       example:
         account:
-          wall_clock: 1
+          wall_clock: 5
       properties:
         account:
           $ref: '#/components/schemas/dbv0_0_38_association_max_per_account'
@@ -8459,7 +8577,7 @@ components:
       example:
         jobs:
           per:
-            wall_clock: 6
+            wall_clock: 5
         tres:
           total:
           - name: name
@@ -8511,7 +8629,7 @@ components:
               type: type
         per:
           account:
-            wall_clock: 1
+            wall_clock: 5
       properties:
         jobs:
           $ref: '#/components/schemas/dbv0_0_38_association_max_jobs'
@@ -8523,7 +8641,7 @@ components:
     dbv0_0_38_association_min:
       description: Min settings
       example:
-        priority_threshold: 5
+        priority_threshold: 2
       properties:
         priority_threshold:
           description: Min priority threshold
@@ -8532,16 +8650,16 @@ components:
     dbv0_0_38_association_usage:
       description: Association usage
       example:
-        fairshare_factor: 3.616076749251911
-        normalized_shares: 7.386281948385884
-        effective_normalized_usage: 1.2315135367772556
-        job_count: 1
-        group_used_wallclock: 9.301444243932576
-        normalized_priority: 4
-        accrue_job_count: 7
-        fairshare_shares: 2
-        fairshare_level: 6.84685269835264
-        raw_usage: 1
+        fairshare_factor: 4.145608029883936
+        normalized_shares: 1.0246457001441578
+        effective_normalized_usage: 1.4894159098541704
+        job_count: 7
+        group_used_wallclock: 2.027123023002322
+        normalized_priority: 1
+        accrue_job_count: 3
+        fairshare_shares: 7
+        fairshare_level: 1.1730742509559433
+        raw_usage: 6
       properties:
         accrue_job_count:
           description: Jobs accuring priority
@@ -8577,8 +8695,8 @@ components:
     dbv0_0_38_qos_limits_max_wall_clock_per:
       description: Limit on wallclock per settings
       example:
-        qos: 4
-        job: 5
+        qos: 9
+        job: 9
       properties:
         qos:
           description: Max wallclock per QOS
@@ -8591,8 +8709,8 @@ components:
       description: Limit on wallclock settings
       example:
         per:
-          qos: 4
-          job: 5
+          qos: 9
+          job: 9
       properties:
         per:
           $ref: '#/components/schemas/dbv0_0_38_qos_limits_max_wall_clock_per'
@@ -8600,8 +8718,8 @@ components:
     dbv0_0_38_qos_limits_max_jobs_active_jobs_per:
       description: Limits on active jobs per settings
       example:
-        user: 9
-        account: 9
+        user: 8
+        account: 6
       properties:
         account:
           description: Max jobs per account
@@ -8614,8 +8732,8 @@ components:
       description: Limits on active jobs settings
       example:
         per:
-          user: 9
-          account: 9
+          user: 8
+          account: 6
       properties:
         per:
           $ref: '#/components/schemas/dbv0_0_38_qos_limits_max_jobs_active_jobs_per'
@@ -8625,8 +8743,8 @@ components:
       example:
         active_jobs:
           per:
-            user: 9
-            account: 9
+            user: 8
+            account: 6
       properties:
         active_jobs:
           $ref: '#/components/schemas/dbv0_0_38_qos_limits_max_jobs_active_jobs'
@@ -8634,8 +8752,8 @@ components:
     dbv0_0_38_qos_limits_max_accruing_per:
       description: Max accuring priority per setting
       example:
-        user: 8
-        account: 6
+        user: 6
+        account: 9
       properties:
         account:
           description: Max accuring priority per account
@@ -8648,8 +8766,8 @@ components:
       description: Limits on accruing priority
       example:
         per:
-          user: 8
-          account: 6
+          user: 6
+          account: 9
       properties:
         per:
           $ref: '#/components/schemas/dbv0_0_38_qos_limits_max_accruing_per'
@@ -8910,22 +9028,22 @@ components:
         jobs:
           active_jobs:
             per:
-              user: 9
-              account: 9
+              user: 8
+              account: 6
         accruing:
           per:
-            user: 8
-            account: 6
+            user: 6
+            account: 9
         wall_clock:
           per:
-            qos: 4
-            job: 5
+            qos: 9
+            job: 9
         tres:
           minutes:
             per:
               qos:
-              - name: name
-                count: 3
+                - name: name
+                  count: 3
                 id: 7
                 type: type
               - name: name
@@ -9045,7 +9163,7 @@ components:
     dbv0_0_38_qos_limits_min:
       description: Min limit settings
       example:
-        priority_threshold: 9
+        priority_threshold: 3
         tres:
           per:
             job:
@@ -9068,7 +9186,7 @@ components:
       description: Assigned limits
       example:
         min:
-          priority_threshold: 9
+          priority_threshold: 3
           tres:
             per:
               job:
@@ -9084,22 +9202,22 @@ components:
           jobs:
             active_jobs:
               per:
-                user: 9
-                account: 9
+                user: 8
+                account: 6
           accruing:
             per:
-              user: 8
-              account: 6
+              user: 6
+              account: 9
           wall_clock:
             per:
-              qos: 4
-              job: 5
+              qos: 9
+              job: 9
           tres:
             minutes:
               per:
                 qos:
-                - name: name
-                  count: 3
+                  - name: name
+                    count: 3
                   id: 7
                   type: type
                 - name: name
@@ -9170,7 +9288,7 @@ components:
                 count: 3
                 id: 7
                 type: type
-        factor: 1.1730742509559433
+        factor: 5.025004791520295
       properties:
         factor:
           description: factor to apply to TRES count for associations using this QOS

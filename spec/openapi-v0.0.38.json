@@ -3194,6 +3194,28 @@
        "dbv0.0.38_cluster_info": {
          "type": "object",
          "properties": {
+           "meta": {
+             "$ref": "#\/components\/schemas\/dbv0.0.38_meta"
+           },
+           "errors": {
+             "type": "array",
+             "description": "Slurm errors",
+             "items": {
+               "$ref": "#\/components\/schemas\/dbv0.0.38_error"
+             }
+           },
+           "clusters": {
+             "type": "array",
+             "description": "Array of jobs",
+             "items": {
+               "$ref": "#\/components\/schemas\/dbv0.0.38_cluster"
+             }
+           }
+         }
+       },
+       "dbv0.0.38_cluster": {
+         "type": "object",
+         "properties": {
            "controller": {
              "type": "object",
              "description": "Information about controller",
@@ -3242,11 +3264,7 @@
              "description": "Number rpc version"
            },
            "tres": {
-             "type": "array",
-             "description": "List of TRES in cluster",
-             "items": {
-               "$ref": "#\/components\/schemas\/dbv0.0.38_response_tres"
-             }
+             "$ref": "#\/components\/schemas\/dbv0.0.38_tres_list"
            }
          }
        },
@@ -4560,12 +4578,15 @@
                "$ref": "#\/components\/schemas\/dbv0.0.38_error"
              }
            },
-           "tres": {
+           "clusters": {
              "type": "array",
-             "description": "Array of TRES",
+             "description": "Array of jobs",
              "items": {
-               "$ref": "#\/components\/schemas\/dbv0.0.38_tres_list"
+               "$ref": "#\/components\/schemas\/dbv0.0.38_cluster"
              }
+           },
+           "tres": {
+             "$ref": "#\/components\/schemas\/dbv0.0.38_tres_list"
            },
            "accounts": {
              "type": "array",

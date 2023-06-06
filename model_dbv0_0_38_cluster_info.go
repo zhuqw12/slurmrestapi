@@ -20,20 +20,11 @@ var _ MappedNullable = &Dbv0038ClusterInfo{}
 
 // Dbv0038ClusterInfo struct for Dbv0038ClusterInfo
 type Dbv0038ClusterInfo struct {
-	Controller *Dbv0038ClusterInfoController `json:"controller,omitempty"`
-	// List of properties of cluster
-	Flags []string `json:"flags,omitempty"`
-	// Cluster name
-	Name *string `json:"name,omitempty"`
-	// Assigned nodes
-	Nodes *string `json:"nodes,omitempty"`
-	// Configured select plugin
-	SelectPlugin *string                         `json:"select_plugin,omitempty"`
-	Associations *Dbv0038ClusterInfoAssociations `json:"associations,omitempty"`
-	// Number rpc version
-	RpcVersion *int32 `json:"rpc_version,omitempty"`
-	// List of TRES in cluster
-	Tres []Dbv0038ResponseTres `json:"tres,omitempty"`
+	Meta *Dbv0038Meta `json:"meta,omitempty"`
+	// Slurm errors
+	Errors []Dbv0038Error `json:"errors,omitempty"`
+	// Array of jobs
+	Clusters []Dbv0038Cluster `json:"clusters,omitempty"`
 }
 
 // NewDbv0038ClusterInfo instantiates a new Dbv0038ClusterInfo object
@@ -53,260 +44,100 @@ func NewDbv0038ClusterInfoWithDefaults() *Dbv0038ClusterInfo {
 	return &this
 }
 
-// GetController returns the Controller field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetController() Dbv0038ClusterInfoController {
-	if o == nil || IsNil(o.Controller) {
-		var ret Dbv0038ClusterInfoController
+// GetMeta returns the Meta field value if set, zero value otherwise.
+func (o *Dbv0038ClusterInfo) GetMeta() Dbv0038Meta {
+	if o == nil || IsNil(o.Meta) {
+		var ret Dbv0038Meta
 		return ret
 	}
-	return *o.Controller
+	return *o.Meta
 }
 
-// GetControllerOk returns a tuple with the Controller field value if set, nil otherwise
+// GetMetaOk returns a tuple with the Meta field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetControllerOk() (*Dbv0038ClusterInfoController, bool) {
-	if o == nil || IsNil(o.Controller) {
+func (o *Dbv0038ClusterInfo) GetMetaOk() (*Dbv0038Meta, bool) {
+	if o == nil || IsNil(o.Meta) {
 		return nil, false
 	}
-	return o.Controller, true
+	return o.Meta, true
 }
 
-// HasController returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasController() bool {
-	if o != nil && !IsNil(o.Controller) {
+// HasMeta returns a boolean if a field has been set.
+func (o *Dbv0038ClusterInfo) HasMeta() bool {
+	if o != nil && !IsNil(o.Meta) {
 		return true
 	}
 
 	return false
 }
 
-// SetController gets a reference to the given Dbv0038ClusterInfoController and assigns it to the Controller field.
-func (o *Dbv0038ClusterInfo) SetController(v Dbv0038ClusterInfoController) {
-	o.Controller = &v
+// SetMeta gets a reference to the given Dbv0038Meta and assigns it to the Meta field.
+func (o *Dbv0038ClusterInfo) SetMeta(v Dbv0038Meta) {
+	o.Meta = &v
 }
 
-// GetFlags returns the Flags field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetFlags() []string {
-	if o == nil || IsNil(o.Flags) {
-		var ret []string
+// GetErrors returns the Errors field value if set, zero value otherwise.
+func (o *Dbv0038ClusterInfo) GetErrors() []Dbv0038Error {
+	if o == nil || IsNil(o.Errors) {
+		var ret []Dbv0038Error
 		return ret
 	}
-	return o.Flags
+	return o.Errors
 }
 
-// GetFlagsOk returns a tuple with the Flags field value if set, nil otherwise
+// GetErrorsOk returns a tuple with the Errors field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetFlagsOk() ([]string, bool) {
-	if o == nil || IsNil(o.Flags) {
+func (o *Dbv0038ClusterInfo) GetErrorsOk() ([]Dbv0038Error, bool) {
+	if o == nil || IsNil(o.Errors) {
 		return nil, false
 	}
-	return o.Flags, true
+	return o.Errors, true
 }
 
-// HasFlags returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasFlags() bool {
-	if o != nil && !IsNil(o.Flags) {
+// HasErrors returns a boolean if a field has been set.
+func (o *Dbv0038ClusterInfo) HasErrors() bool {
+	if o != nil && !IsNil(o.Errors) {
 		return true
 	}
 
 	return false
 }
 
-// SetFlags gets a reference to the given []string and assigns it to the Flags field.
-func (o *Dbv0038ClusterInfo) SetFlags(v []string) {
-	o.Flags = v
+// SetErrors gets a reference to the given []Dbv0038Error and assigns it to the Errors field.
+func (o *Dbv0038ClusterInfo) SetErrors(v []Dbv0038Error) {
+	o.Errors = v
 }
 
-// GetName returns the Name field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetName() string {
-	if o == nil || IsNil(o.Name) {
-		var ret string
+// GetClusters returns the Clusters field value if set, zero value otherwise.
+func (o *Dbv0038ClusterInfo) GetClusters() []Dbv0038Cluster {
+	if o == nil || IsNil(o.Clusters) {
+		var ret []Dbv0038Cluster
 		return ret
 	}
-	return *o.Name
+	return o.Clusters
 }
 
-// GetNameOk returns a tuple with the Name field value if set, nil otherwise
+// GetClustersOk returns a tuple with the Clusters field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetNameOk() (*string, bool) {
-	if o == nil || IsNil(o.Name) {
+func (o *Dbv0038ClusterInfo) GetClustersOk() ([]Dbv0038Cluster, bool) {
+	if o == nil || IsNil(o.Clusters) {
 		return nil, false
 	}
-	return o.Name, true
+	return o.Clusters, true
 }
 
-// HasName returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasName() bool {
-	if o != nil && !IsNil(o.Name) {
+// HasClusters returns a boolean if a field has been set.
+func (o *Dbv0038ClusterInfo) HasClusters() bool {
+	if o != nil && !IsNil(o.Clusters) {
 		return true
 	}
 
 	return false
 }
 
-// SetName gets a reference to the given string and assigns it to the Name field.
-func (o *Dbv0038ClusterInfo) SetName(v string) {
-	o.Name = &v
-}
-
-// GetNodes returns the Nodes field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetNodes() string {
-	if o == nil || IsNil(o.Nodes) {
-		var ret string
-		return ret
-	}
-	return *o.Nodes
-}
-
-// GetNodesOk returns a tuple with the Nodes field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetNodesOk() (*string, bool) {
-	if o == nil || IsNil(o.Nodes) {
-		return nil, false
-	}
-	return o.Nodes, true
-}
-
-// HasNodes returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasNodes() bool {
-	if o != nil && !IsNil(o.Nodes) {
-		return true
-	}
-
-	return false
-}
-
-// SetNodes gets a reference to the given string and assigns it to the Nodes field.
-func (o *Dbv0038ClusterInfo) SetNodes(v string) {
-	o.Nodes = &v
-}
-
-// GetSelectPlugin returns the SelectPlugin field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetSelectPlugin() string {
-	if o == nil || IsNil(o.SelectPlugin) {
-		var ret string
-		return ret
-	}
-	return *o.SelectPlugin
-}
-
-// GetSelectPluginOk returns a tuple with the SelectPlugin field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetSelectPluginOk() (*string, bool) {
-	if o == nil || IsNil(o.SelectPlugin) {
-		return nil, false
-	}
-	return o.SelectPlugin, true
-}
-
-// HasSelectPlugin returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasSelectPlugin() bool {
-	if o != nil && !IsNil(o.SelectPlugin) {
-		return true
-	}
-
-	return false
-}
-
-// SetSelectPlugin gets a reference to the given string and assigns it to the SelectPlugin field.
-func (o *Dbv0038ClusterInfo) SetSelectPlugin(v string) {
-	o.SelectPlugin = &v
-}
-
-// GetAssociations returns the Associations field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetAssociations() Dbv0038ClusterInfoAssociations {
-	if o == nil || IsNil(o.Associations) {
-		var ret Dbv0038ClusterInfoAssociations
-		return ret
-	}
-	return *o.Associations
-}
-
-// GetAssociationsOk returns a tuple with the Associations field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetAssociationsOk() (*Dbv0038ClusterInfoAssociations, bool) {
-	if o == nil || IsNil(o.Associations) {
-		return nil, false
-	}
-	return o.Associations, true
-}
-
-// HasAssociations returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasAssociations() bool {
-	if o != nil && !IsNil(o.Associations) {
-		return true
-	}
-
-	return false
-}
-
-// SetAssociations gets a reference to the given Dbv0038ClusterInfoAssociations and assigns it to the Associations field.
-func (o *Dbv0038ClusterInfo) SetAssociations(v Dbv0038ClusterInfoAssociations) {
-	o.Associations = &v
-}
-
-// GetRpcVersion returns the RpcVersion field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetRpcVersion() int32 {
-	if o == nil || IsNil(o.RpcVersion) {
-		var ret int32
-		return ret
-	}
-	return *o.RpcVersion
-}
-
-// GetRpcVersionOk returns a tuple with the RpcVersion field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetRpcVersionOk() (*int32, bool) {
-	if o == nil || IsNil(o.RpcVersion) {
-		return nil, false
-	}
-	return o.RpcVersion, true
-}
-
-// HasRpcVersion returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasRpcVersion() bool {
-	if o != nil && !IsNil(o.RpcVersion) {
-		return true
-	}
-
-	return false
-}
-
-// SetRpcVersion gets a reference to the given int32 and assigns it to the RpcVersion field.
-func (o *Dbv0038ClusterInfo) SetRpcVersion(v int32) {
-	o.RpcVersion = &v
-}
-
-// GetTres returns the Tres field value if set, zero value otherwise.
-func (o *Dbv0038ClusterInfo) GetTres() []Dbv0038ResponseTres {
-	if o == nil || IsNil(o.Tres) {
-		var ret []Dbv0038ResponseTres
-		return ret
-	}
-	return o.Tres
-}
-
-// GetTresOk returns a tuple with the Tres field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *Dbv0038ClusterInfo) GetTresOk() ([]Dbv0038ResponseTres, bool) {
-	if o == nil || IsNil(o.Tres) {
-		return nil, false
-	}
-	return o.Tres, true
-}
-
-// HasTres returns a boolean if a field has been set.
-func (o *Dbv0038ClusterInfo) HasTres() bool {
-	if o != nil && !IsNil(o.Tres) {
-		return true
-	}
-
-	return false
-}
-
-// SetTres gets a reference to the given []Dbv0038ResponseTres and assigns it to the Tres field.
-func (o *Dbv0038ClusterInfo) SetTres(v []Dbv0038ResponseTres) {
-	o.Tres = v
+// SetClusters gets a reference to the given []Dbv0038Cluster and assigns it to the Clusters field.
+func (o *Dbv0038ClusterInfo) SetClusters(v []Dbv0038Cluster) {
+	o.Clusters = v
 }
 
 func (o Dbv0038ClusterInfo) MarshalJSON() ([]byte, error) {
@@ -319,29 +150,14 @@ func (o Dbv0038ClusterInfo) MarshalJSON() ([]byte, error) {
 
 func (o Dbv0038ClusterInfo) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Controller) {
-		toSerialize["controller"] = o.Controller
+	if !IsNil(o.Meta) {
+		toSerialize["meta"] = o.Meta
 	}
-	if !IsNil(o.Flags) {
-		toSerialize["flags"] = o.Flags
+	if !IsNil(o.Errors) {
+		toSerialize["errors"] = o.Errors
 	}
-	if !IsNil(o.Name) {
-		toSerialize["name"] = o.Name
-	}
-	if !IsNil(o.Nodes) {
-		toSerialize["nodes"] = o.Nodes
-	}
-	if !IsNil(o.SelectPlugin) {
-		toSerialize["select_plugin"] = o.SelectPlugin
-	}
-	if !IsNil(o.Associations) {
-		toSerialize["associations"] = o.Associations
-	}
-	if !IsNil(o.RpcVersion) {
-		toSerialize["rpc_version"] = o.RpcVersion
-	}
-	if !IsNil(o.Tres) {
-		toSerialize["tres"] = o.Tres
+	if !IsNil(o.Clusters) {
+		toSerialize["clusters"] = o.Clusters
 	}
 	return toSerialize, nil
 }

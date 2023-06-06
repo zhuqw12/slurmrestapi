@@ -4,15 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Description** | Pointer to **string** | QOS description | [optional] 
+**Description** | Pointer to **string** | QOS description | [optional]
 **Flags** | Pointer to **[]string** | List of properties of QOS | [optional]
 **Id** | Pointer to **int32** | Database id | [optional]
 **Limits** | Pointer to [**Dbv0038QosLimits**](Dbv0038QosLimits.md) |  | [optional]
-**Preempt** | Pointer to [**Dbv0038QosPreempt**](Dbv0038QosPreempt.md) |  | [optional] 
-**Priority** | Pointer to **int64** | QOS priority | [optional] 
-**UsageFactor** | Pointer to **float32** | Usage factor | [optional] 
-**UsageThreshold** | Pointer to **float32** | Usage threshold | [optional] 
-**Name** | Pointer to **string** | Assigned name of QOS | [optional] 
+**Preempt** | Pointer to [**Dbv0038QosPreempt**](Dbv0038QosPreempt.md) |  | [optional]
+**Priority** | Pointer to **int64** | QOS priority | [optional]
+**UsageFactor** | Pointer to **float32** | Usage factor | [optional]
+**UsageThreshold** | Pointer to **float32** | Usage threshold | [optional]
+**Name** | Pointer to **string** | Assigned name of QOS | [optional]
 
 ## Methods
 

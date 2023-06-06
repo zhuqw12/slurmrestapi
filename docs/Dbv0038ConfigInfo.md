@@ -4,14 +4,15 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Meta** | Pointer to [**Dbv0038Meta**](Dbv0038Meta.md) |  | [optional] 
-**Errors** | Pointer to [**[]Dbv0038Error**](Dbv0038Error.md) | Slurm errors | [optional] 
-**Tres** | Pointer to [**[][]Dbv0038TresListInner**]([]Dbv0038TresListInner.md) | Array of TRES | [optional] 
-**Accounts** | Pointer to [**[]Dbv0038Account**](Dbv0038Account.md) | Array of accounts | [optional] 
-**Associations** | Pointer to [**[]Dbv0038Association**](Dbv0038Association.md) | Array of associations | [optional] 
-**Users** | Pointer to [**[]Dbv0038User**](Dbv0038User.md) | Array of users | [optional] 
-**Qos** | Pointer to [**[]Dbv0038Qos**](Dbv0038Qos.md) | Array of qos | [optional] 
-**Wckeys** | Pointer to [**[]Dbv0038Wckey**](Dbv0038Wckey.md) | Array of wckeys | [optional] 
+**Meta** | Pointer to [**Dbv0038Meta**](Dbv0038Meta.md) |  | [optional]
+**Errors** | Pointer to [**[]Dbv0038Error**](Dbv0038Error.md) | Slurm errors | [optional]
+**Clusters** | Pointer to [**[]Dbv0038Cluster**](Dbv0038Cluster.md) | Array of jobs | [optional]
+**Tres** | Pointer to [**[]Dbv0038TresListInner**](Dbv0038TresListInner.md) | TRES list of attributes | [optional]
+**Accounts** | Pointer to [**[]Dbv0038Account**](Dbv0038Account.md) | Array of accounts | [optional]
+**Associations** | Pointer to [**[]Dbv0038Association**](Dbv0038Association.md) | Array of associations | [optional]
+**Users** | Pointer to [**[]Dbv0038User**](Dbv0038User.md) | Array of users | [optional]
+**Qos** | Pointer to [**[]Dbv0038Qos**](Dbv0038Qos.md) | Array of qos | [optional]
+**Wckeys** | Pointer to [**[]Dbv0038Wckey**](Dbv0038Wckey.md) | Array of wckeys | [optional]
 
 ## Methods
 
@@ -82,22 +83,47 @@ SetErrors sets Errors field to given value.
 
 HasErrors returns a boolean if a field has been set.
 
+### GetClusters
+
+`func (o *Dbv0038ConfigInfo) GetClusters() []Dbv0038Cluster`
+
+GetClusters returns the Clusters field if non-nil, zero value otherwise.
+
+### GetClustersOk
+
+`func (o *Dbv0038ConfigInfo) GetClustersOk() (*[]Dbv0038Cluster, bool)`
+
+GetClustersOk returns a tuple with the Clusters field if it's non-nil, zero value otherwise and a boolean to check if
+the value has been set.
+
+### SetClusters
+
+`func (o *Dbv0038ConfigInfo) SetClusters(v []Dbv0038Cluster)`
+
+SetClusters sets Clusters field to given value.
+
+### HasClusters
+
+`func (o *Dbv0038ConfigInfo) HasClusters() bool`
+
+HasClusters returns a boolean if a field has been set.
+
 ### GetTres
 
-`func (o *Dbv0038ConfigInfo) GetTres() [][]Dbv0038TresListInner`
+`func (o *Dbv0038ConfigInfo) GetTres() []Dbv0038TresListInner`
 
 GetTres returns the Tres field if non-nil, zero value otherwise.
 
 ### GetTresOk
 
-`func (o *Dbv0038ConfigInfo) GetTresOk() (*[][]Dbv0038TresListInner, bool)`
+`func (o *Dbv0038ConfigInfo) GetTresOk() (*[]Dbv0038TresListInner, bool)`
 
-GetTresOk returns a tuple with the Tres field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetTresOk returns a tuple with the Tres field if it's non-nil, zero value otherwise and a boolean to check if the value
+has been set.
 
 ### SetTres
 
-`func (o *Dbv0038ConfigInfo) SetTres(v [][]Dbv0038TresListInner)`
+`func (o *Dbv0038ConfigInfo) SetTres(v []Dbv0038TresListInner)`
 
 SetTres sets Tres field to given value.
 

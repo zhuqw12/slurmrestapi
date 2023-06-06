@@ -4,14 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Controller** | Pointer to [**Dbv0038ClusterInfoController**](Dbv0038ClusterInfoController.md) |  | [optional] 
-**Flags** | Pointer to **[]string** | List of properties of cluster | [optional] 
-**Name** | Pointer to **string** | Cluster name | [optional] 
-**Nodes** | Pointer to **string** | Assigned nodes | [optional] 
-**SelectPlugin** | Pointer to **string** | Configured select plugin | [optional] 
-**Associations** | Pointer to [**Dbv0038ClusterInfoAssociations**](Dbv0038ClusterInfoAssociations.md) |  | [optional] 
-**RpcVersion** | Pointer to **int32** | Number rpc version | [optional] 
-**Tres** | Pointer to [**[]Dbv0038ResponseTres**](Dbv0038ResponseTres.md) | List of TRES in cluster | [optional] 
+**Meta** | Pointer to [**Dbv0038Meta**](Dbv0038Meta.md) |  | [optional]
+**Errors** | Pointer to [**[]Dbv0038Error**](Dbv0038Error.md) | Slurm errors | [optional]
+**Clusters** | Pointer to [**[]Dbv0038Cluster**](Dbv0038Cluster.md) | Array of jobs | [optional]
 
 ## Methods
 
@@ -32,206 +27,80 @@ NewDbv0038ClusterInfoWithDefaults instantiates a new Dbv0038ClusterInfo object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetController
+### GetMeta
 
-`func (o *Dbv0038ClusterInfo) GetController() Dbv0038ClusterInfoController`
+`func (o *Dbv0038ClusterInfo) GetMeta() Dbv0038Meta`
 
-GetController returns the Controller field if non-nil, zero value otherwise.
+GetMeta returns the Meta field if non-nil, zero value otherwise.
 
-### GetControllerOk
+### GetMetaOk
 
-`func (o *Dbv0038ClusterInfo) GetControllerOk() (*Dbv0038ClusterInfoController, bool)`
+`func (o *Dbv0038ClusterInfo) GetMetaOk() (*Dbv0038Meta, bool)`
 
-GetControllerOk returns a tuple with the Controller field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetMetaOk returns a tuple with the Meta field if it's non-nil, zero value otherwise and a boolean to check if the value
+has been set.
 
-### SetController
+### SetMeta
 
-`func (o *Dbv0038ClusterInfo) SetController(v Dbv0038ClusterInfoController)`
+`func (o *Dbv0038ClusterInfo) SetMeta(v Dbv0038Meta)`
 
-SetController sets Controller field to given value.
+SetMeta sets Meta field to given value.
 
-### HasController
+### HasMeta
 
-`func (o *Dbv0038ClusterInfo) HasController() bool`
+`func (o *Dbv0038ClusterInfo) HasMeta() bool`
 
-HasController returns a boolean if a field has been set.
+HasMeta returns a boolean if a field has been set.
 
-### GetFlags
+### GetErrors
 
-`func (o *Dbv0038ClusterInfo) GetFlags() []string`
+`func (o *Dbv0038ClusterInfo) GetErrors() []Dbv0038Error`
 
-GetFlags returns the Flags field if non-nil, zero value otherwise.
+GetErrors returns the Errors field if non-nil, zero value otherwise.
 
-### GetFlagsOk
+### GetErrorsOk
 
-`func (o *Dbv0038ClusterInfo) GetFlagsOk() (*[]string, bool)`
+`func (o *Dbv0038ClusterInfo) GetErrorsOk() (*[]Dbv0038Error, bool)`
 
-GetFlagsOk returns a tuple with the Flags field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetErrorsOk returns a tuple with the Errors field if it's non-nil, zero value otherwise and a boolean to check if the
+value has been set.
 
-### SetFlags
+### SetErrors
 
-`func (o *Dbv0038ClusterInfo) SetFlags(v []string)`
+`func (o *Dbv0038ClusterInfo) SetErrors(v []Dbv0038Error)`
 
-SetFlags sets Flags field to given value.
+SetErrors sets Errors field to given value.
 
-### HasFlags
+### HasErrors
 
-`func (o *Dbv0038ClusterInfo) HasFlags() bool`
+`func (o *Dbv0038ClusterInfo) HasErrors() bool`
 
-HasFlags returns a boolean if a field has been set.
+HasErrors returns a boolean if a field has been set.
 
-### GetName
+### GetClusters
 
-`func (o *Dbv0038ClusterInfo) GetName() string`
+`func (o *Dbv0038ClusterInfo) GetClusters() []Dbv0038Cluster`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClusters returns the Clusters field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClustersOk
 
-`func (o *Dbv0038ClusterInfo) GetNameOk() (*string, bool)`
+`func (o *Dbv0038ClusterInfo) GetClustersOk() (*[]Dbv0038Cluster, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetClustersOk returns a tuple with the Clusters field if it's non-nil, zero value otherwise and a boolean to check if
+the value has been set.
 
-### SetName
+### SetClusters
 
-`func (o *Dbv0038ClusterInfo) SetName(v string)`
+`func (o *Dbv0038ClusterInfo) SetClusters(v []Dbv0038Cluster)`
 
-SetName sets Name field to given value.
+SetClusters sets Clusters field to given value.
 
-### HasName
+### HasClusters
 
-`func (o *Dbv0038ClusterInfo) HasName() bool`
+`func (o *Dbv0038ClusterInfo) HasClusters() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetNodes
-
-`func (o *Dbv0038ClusterInfo) GetNodes() string`
-
-GetNodes returns the Nodes field if non-nil, zero value otherwise.
-
-### GetNodesOk
-
-`func (o *Dbv0038ClusterInfo) GetNodesOk() (*string, bool)`
-
-GetNodesOk returns a tuple with the Nodes field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNodes
-
-`func (o *Dbv0038ClusterInfo) SetNodes(v string)`
-
-SetNodes sets Nodes field to given value.
-
-### HasNodes
-
-`func (o *Dbv0038ClusterInfo) HasNodes() bool`
-
-HasNodes returns a boolean if a field has been set.
-
-### GetSelectPlugin
-
-`func (o *Dbv0038ClusterInfo) GetSelectPlugin() string`
-
-GetSelectPlugin returns the SelectPlugin field if non-nil, zero value otherwise.
-
-### GetSelectPluginOk
-
-`func (o *Dbv0038ClusterInfo) GetSelectPluginOk() (*string, bool)`
-
-GetSelectPluginOk returns a tuple with the SelectPlugin field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSelectPlugin
-
-`func (o *Dbv0038ClusterInfo) SetSelectPlugin(v string)`
-
-SetSelectPlugin sets SelectPlugin field to given value.
-
-### HasSelectPlugin
-
-`func (o *Dbv0038ClusterInfo) HasSelectPlugin() bool`
-
-HasSelectPlugin returns a boolean if a field has been set.
-
-### GetAssociations
-
-`func (o *Dbv0038ClusterInfo) GetAssociations() Dbv0038ClusterInfoAssociations`
-
-GetAssociations returns the Associations field if non-nil, zero value otherwise.
-
-### GetAssociationsOk
-
-`func (o *Dbv0038ClusterInfo) GetAssociationsOk() (*Dbv0038ClusterInfoAssociations, bool)`
-
-GetAssociationsOk returns a tuple with the Associations field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAssociations
-
-`func (o *Dbv0038ClusterInfo) SetAssociations(v Dbv0038ClusterInfoAssociations)`
-
-SetAssociations sets Associations field to given value.
-
-### HasAssociations
-
-`func (o *Dbv0038ClusterInfo) HasAssociations() bool`
-
-HasAssociations returns a boolean if a field has been set.
-
-### GetRpcVersion
-
-`func (o *Dbv0038ClusterInfo) GetRpcVersion() int32`
-
-GetRpcVersion returns the RpcVersion field if non-nil, zero value otherwise.
-
-### GetRpcVersionOk
-
-`func (o *Dbv0038ClusterInfo) GetRpcVersionOk() (*int32, bool)`
-
-GetRpcVersionOk returns a tuple with the RpcVersion field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRpcVersion
-
-`func (o *Dbv0038ClusterInfo) SetRpcVersion(v int32)`
-
-SetRpcVersion sets RpcVersion field to given value.
-
-### HasRpcVersion
-
-`func (o *Dbv0038ClusterInfo) HasRpcVersion() bool`
-
-HasRpcVersion returns a boolean if a field has been set.
-
-### GetTres
-
-`func (o *Dbv0038ClusterInfo) GetTres() []Dbv0038ResponseTres`
-
-GetTres returns the Tres field if non-nil, zero value otherwise.
-
-### GetTresOk
-
-`func (o *Dbv0038ClusterInfo) GetTresOk() (*[]Dbv0038ResponseTres, bool)`
-
-GetTresOk returns a tuple with the Tres field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTres
-
-`func (o *Dbv0038ClusterInfo) SetTres(v []Dbv0038ResponseTres)`
-
-SetTres sets Tres field to given value.
-
-### HasTres
-
-`func (o *Dbv0038ClusterInfo) HasTres() bool`
-
-HasTres returns a boolean if a field has been set.
-
+HasClusters returns a boolean if a field has been set.
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

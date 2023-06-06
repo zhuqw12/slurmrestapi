@@ -29,14 +29,22 @@ func main() {
 	//v0038GetNodeName(client, "phy0023")
 	//v0038GetPartitions(client)
 	//v0038GetPartitionName(client, "compute")
+	//v0038GetReservations(client)
 
-	//v0038GetDBJobs(client)
-	//v0038GetDBJobID(client, "89")
 	//v0038GetDBAccounts(client)
 	//v0038GetDBAccountName(client, "root")
+	//v0038GetDBAssociations(client)
+	//v0038GetDBClusters(client)
+	//v0038GetDBClusterByName(client, "zcycluster")
+	//v0038GetDBConfig(client)
+	//v0038GetDBJobs(client)
+	//v0038GetDBJobID(client, "89")
+	//v0038GetDBQos(client)
+	//v0038GetDBQosByName(client, "normal")
+	//v0038GetDBTres(client)
 	//v0038GetDBUsers(client)
 	//v0038GetDBUserName(client, "wqtest")
-	v0038GetDBQos(client)
+	v0038GetDBWckeys(client)
 }
 
 func v0038JobSubmission(client *openapiclient.APIClient) {
@@ -200,6 +208,25 @@ func v0038GetPartitions(client *openapiclient.APIClient) {
 		}
 	}
 }
+func v0038GetReservations(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Reservations=====================================")
+	jreq := client.SlurmAPI.SlurmV0038GetReservations(context.Background())
+	reservations, resp, err := client.SlurmAPI.SlurmV0038GetReservationsExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, reservation := range reservations.GetReservations() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(reservation)
+		if err == nil {
+			fmt.Printf("Node %s [%s]\n", reservation.GetName(), marshal)
+		}
+	}
+}
 
 func v0038GetPartitionName(client *openapiclient.APIClient, name string) {
 	fmt.Println("===================================GET DB Job ID=====================================")
@@ -318,5 +345,138 @@ func v0038GetDBQos(client *openapiclient.APIClient) {
 		if err == nil {
 			fmt.Printf("qos %s [%s]\n", qos.GetName(), marshal)
 		}
+	}
+}
+
+func v0038GetDBQosByName(client *openapiclient.APIClient, name string) {
+	fmt.Println("===================================GET Qos=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetSingleQos(context.Background(), name)
+	qoss, resp, err := client.SlurmAPI.SlurmdbV0038GetSingleQosExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, qos := range qoss.GetQos() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(qos)
+		if err == nil {
+			fmt.Printf("qos %s [%s]\n", qos.GetName(), marshal)
+		}
+	}
+}
+
+func v0038GetDBClusters(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Clusters=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetClusters(context.Background())
+	clusters, resp, err := client.SlurmAPI.SlurmdbV0038GetClustersExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, cluster := range clusters.GetClusters() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(cluster)
+		if err == nil {
+			fmt.Printf("cluster - %s [%s]\n", cluster.GetName(), marshal)
+		}
+	}
+}
+func v0038GetDBAssociations(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Associations=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetAssociations(context.Background())
+	associations, resp, err := client.SlurmAPI.SlurmdbV0038GetAssociationsExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, association := range associations.GetAssociations() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(association)
+		if err == nil {
+			fmt.Printf("associations - %s [%s]\n", association.GetAccount(), marshal)
+		}
+	}
+}
+
+func v0038GetDBTres(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Tres=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetTres(context.Background())
+	tres, resp, err := client.SlurmAPI.SlurmdbV0038GetTresExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, tre := range tres.GetTres() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(tre)
+		if err == nil {
+			fmt.Printf("associations - %d [%s]\n", tre.GetId(), marshal)
+		}
+	}
+}
+func v0038GetDBWckeys(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Wckeys=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetWckeys(context.Background())
+	wckeys, resp, err := client.SlurmAPI.SlurmdbV0038GetWckeysExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, wckey := range wckeys.GetWckeys() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(wckey)
+		if err == nil {
+			fmt.Printf("wckey - %d [%s]\n", wckey.GetId(), marshal)
+		}
+	}
+}
+
+func v0038GetDBClusterByName(client *openapiclient.APIClient, name string) {
+	fmt.Println("===================================GET Clusters=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetCluster(context.Background(), name)
+	clusters, resp, err := client.SlurmAPI.SlurmdbV0038GetClusterExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	//fmt.Println(jobs)
+	for _, cluster := range clusters.GetClusters() {
+		//fmt.Println(job)
+		marshal, err := json.Marshal(cluster)
+		if err == nil {
+			fmt.Printf("cluster - %s [%s]\n", cluster.GetName(), marshal)
+		}
+	}
+}
+func v0038GetDBConfig(client *openapiclient.APIClient) {
+	fmt.Println("===================================GET Config=====================================")
+	jreq := client.SlurmAPI.SlurmdbV0038GetConfig(context.Background())
+	config, resp, err := client.SlurmAPI.SlurmdbV0038GetConfigExecute(jreq)
+	if err != nil {
+		log.Fatalf("FAIL: %s", err)
+	} else if resp.StatusCode != 200 {
+		log.Fatalf("Invalid status code: %d\n", resp.StatusCode)
+	}
+
+	marshal, err := json.Marshal(config)
+	if err == nil {
+		fmt.Printf("config [%s]\n", marshal)
 	}
 }
