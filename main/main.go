@@ -23,27 +23,27 @@ func main() {
 	client := openapiclient.NewAPIClient(cfg)
 	//v0038JobSubmission(client)
 
-	//v0038GetJobs(client)
-	//v0038GetJobID(client, "149")
-	//v0038GetNodes(client)
-	//v0038GetNodeName(client, "phy0023")
-	//v0038GetPartitions(client)
-	//v0038GetPartitionName(client, "compute")
-	//v0038GetReservations(client)
+	v0038GetJobs(client)
+	v0038GetJobID(client, "89")
+	v0038GetNodes(client)
+	v0038GetNodeName(client, "phy0023")
+	v0038GetPartitions(client)
+	v0038GetPartitionName(client, "compute")
+	v0038GetReservations(client)
 
-	//v0038GetDBAccounts(client)
-	//v0038GetDBAccountName(client, "root")
-	//v0038GetDBAssociations(client)
-	//v0038GetDBClusters(client)
-	//v0038GetDBClusterByName(client, "zcycluster")
-	//v0038GetDBConfig(client)
-	//v0038GetDBJobs(client)
-	//v0038GetDBJobID(client, "89")
-	//v0038GetDBQos(client)
-	//v0038GetDBQosByName(client, "normal")
-	//v0038GetDBTres(client)
-	//v0038GetDBUsers(client)
-	//v0038GetDBUserName(client, "wqtest")
+	v0038GetDBAccounts(client)
+	v0038GetDBAccountName(client, "root")
+	v0038GetDBAssociations(client)
+	v0038GetDBClusters(client)
+	v0038GetDBClusterByName(client, "zcycluster")
+	v0038GetDBConfig(client)
+	v0038GetDBJobs(client)
+	v0038GetDBJobID(client, "89")
+	v0038GetDBQos(client)
+	v0038GetDBQosByName(client, "normal")
+	v0038GetDBTres(client)
+	v0038GetDBUsers(client)
+	v0038GetDBUserName(client, "wqtest")
 	v0038GetDBWckeys(client)
 }
 
@@ -171,7 +171,7 @@ func v0038GetNodes(client *openapiclient.APIClient) {
 }
 
 func v0038GetNodeName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET DB Job ID=====================================")
+	fmt.Println("===================================GET Node Name=====================================")
 	jreq := client.SlurmAPI.SlurmV0038GetNode(context.Background(), name)
 	nodes, resp, err := client.SlurmAPI.SlurmV0038GetNodeExecute(jreq)
 	if err != nil {
@@ -229,7 +229,7 @@ func v0038GetReservations(client *openapiclient.APIClient) {
 }
 
 func v0038GetPartitionName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET DB Job ID=====================================")
+	fmt.Println("===================================GET Partition Name=====================================")
 	jreq := client.SlurmAPI.SlurmV0038GetPartition(context.Background(), name)
 	partitions, resp, err := client.SlurmAPI.SlurmV0038GetPartitionExecute(jreq)
 	if err != nil {
@@ -249,7 +249,7 @@ func v0038GetPartitionName(client *openapiclient.APIClient, name string) {
 }
 
 func v0038GetDBAccounts(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Partitions=====================================")
+	fmt.Println("===================================GET DBAccounts=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetAccounts(context.Background())
 	accounts, resp, err := client.SlurmAPI.SlurmdbV0038GetAccountsExecute(jreq)
 	if err != nil {
@@ -269,7 +269,7 @@ func v0038GetDBAccounts(client *openapiclient.APIClient) {
 }
 
 func v0038GetDBAccountName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET Partitions=====================================")
+	fmt.Println("===================================GET DB AccountName=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetAccount(context.Background(), name)
 	accounts, resp, err := client.SlurmAPI.SlurmdbV0038GetAccountExecute(jreq)
 	if err != nil {
@@ -289,7 +289,7 @@ func v0038GetDBAccountName(client *openapiclient.APIClient, name string) {
 }
 
 func v0038GetDBUsers(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Partitions=====================================")
+	fmt.Println("===================================GET DBUsers=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetUsers(context.Background())
 	users, resp, err := client.SlurmAPI.SlurmdbV0038GetUsersExecute(jreq)
 	if err != nil {
@@ -309,7 +309,7 @@ func v0038GetDBUsers(client *openapiclient.APIClient) {
 }
 
 func v0038GetDBUserName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET Partitions=====================================")
+	fmt.Println("===================================GET DB UserName=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetUser(context.Background(), name)
 	users, resp, err := client.SlurmAPI.SlurmdbV0038GetUserExecute(jreq)
 	if err != nil {
@@ -349,7 +349,7 @@ func v0038GetDBQos(client *openapiclient.APIClient) {
 }
 
 func v0038GetDBQosByName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET Qos=====================================")
+	fmt.Println("===================================GET Qos Name=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetSingleQos(context.Background(), name)
 	qoss, resp, err := client.SlurmAPI.SlurmdbV0038GetSingleQosExecute(jreq)
 	if err != nil {
@@ -369,7 +369,7 @@ func v0038GetDBQosByName(client *openapiclient.APIClient, name string) {
 }
 
 func v0038GetDBClusters(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Clusters=====================================")
+	fmt.Println("===================================GET DB Clusters=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetClusters(context.Background())
 	clusters, resp, err := client.SlurmAPI.SlurmdbV0038GetClustersExecute(jreq)
 	if err != nil {
@@ -388,7 +388,7 @@ func v0038GetDBClusters(client *openapiclient.APIClient) {
 	}
 }
 func v0038GetDBAssociations(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Associations=====================================")
+	fmt.Println("===================================GET DB Associations=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetAssociations(context.Background())
 	associations, resp, err := client.SlurmAPI.SlurmdbV0038GetAssociationsExecute(jreq)
 	if err != nil {
@@ -408,7 +408,7 @@ func v0038GetDBAssociations(client *openapiclient.APIClient) {
 }
 
 func v0038GetDBTres(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Tres=====================================")
+	fmt.Println("===================================GET DB Tres=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetTres(context.Background())
 	tres, resp, err := client.SlurmAPI.SlurmdbV0038GetTresExecute(jreq)
 	if err != nil {
@@ -427,7 +427,7 @@ func v0038GetDBTres(client *openapiclient.APIClient) {
 	}
 }
 func v0038GetDBWckeys(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Wckeys=====================================")
+	fmt.Println("===================================GET DB Wckeys=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetWckeys(context.Background())
 	wckeys, resp, err := client.SlurmAPI.SlurmdbV0038GetWckeysExecute(jreq)
 	if err != nil {
@@ -447,7 +447,7 @@ func v0038GetDBWckeys(client *openapiclient.APIClient) {
 }
 
 func v0038GetDBClusterByName(client *openapiclient.APIClient, name string) {
-	fmt.Println("===================================GET Clusters=====================================")
+	fmt.Println("===================================GET DB Cluster Name=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetCluster(context.Background(), name)
 	clusters, resp, err := client.SlurmAPI.SlurmdbV0038GetClusterExecute(jreq)
 	if err != nil {
@@ -466,7 +466,7 @@ func v0038GetDBClusterByName(client *openapiclient.APIClient, name string) {
 	}
 }
 func v0038GetDBConfig(client *openapiclient.APIClient) {
-	fmt.Println("===================================GET Config=====================================")
+	fmt.Println("===================================GET DB Config=====================================")
 	jreq := client.SlurmAPI.SlurmdbV0038GetConfig(context.Background())
 	config, resp, err := client.SlurmAPI.SlurmdbV0038GetConfigExecute(jreq)
 	if err != nil {
