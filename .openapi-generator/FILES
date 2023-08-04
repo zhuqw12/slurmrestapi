@@ -25,9 +25,10 @@ docs/Dbv0038AssociationMin.md
 docs/Dbv0038AssociationShortInfo.md
 docs/Dbv0038AssociationUsage.md
 docs/Dbv0038AssociationsInfo.md
+docs/Dbv0038Cluster.md
+docs/Dbv0038ClusterAssociations.md
+docs/Dbv0038ClusterController.md
 docs/Dbv0038ClusterInfo.md
-docs/Dbv0038ClusterInfoAssociations.md
-docs/Dbv0038ClusterInfoController.md
 docs/Dbv0038ClustersProperties.md
 docs/Dbv0038ConfigInfo.md
 docs/Dbv0038ConfigResponse.md
@@ -171,9 +172,10 @@ model_dbv0_0_38_association_min.go
 model_dbv0_0_38_association_short_info.go
 model_dbv0_0_38_association_usage.go
 model_dbv0_0_38_associations_info.go
+model_dbv0_0_38_cluster.go
+model_dbv0_0_38_cluster_associations.go
+model_dbv0_0_38_cluster_controller.go
 model_dbv0_0_38_cluster_info.go
-model_dbv0_0_38_cluster_info_associations.go
-model_dbv0_0_38_cluster_info_controller.go
 model_dbv0_0_38_clusters_properties.go
 model_dbv0_0_38_config_info.go
 model_dbv0_0_38_config_response.go

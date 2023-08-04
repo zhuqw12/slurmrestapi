@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Type** | Pointer to **string** | TRES type | [optional] 
 **Name** | Pointer to **string** | TRES name (optional) | [optional] 
-**Id** | Pointer to **int32** | database id | [optional] 
-**Count** | Pointer to **int32** | count of TRES | [optional] 
+**Id** | Pointer to **int32** | database id | [optional]
+**Count** | Pointer to **int64** | count of TRES | [optional]
 
 ## Methods
 
@@ -105,20 +105,20 @@ HasId returns a boolean if a field has been set.
 
 ### GetCount
 
-`func (o *Dbv0038TresListInner) GetCount() int32`
+`func (o *Dbv0038TresListInner) GetCount() int64`
 
 GetCount returns the Count field if non-nil, zero value otherwise.
 
 ### GetCountOk
 
-`func (o *Dbv0038TresListInner) GetCountOk() (*int32, bool)`
+`func (o *Dbv0038TresListInner) GetCountOk() (*int64, bool)`
 
-GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
+GetCountOk returns a tuple with the Count field if it's non-nil, zero value otherwise and a boolean to check if the
+value has been set.
 
 ### SetCount
 
-`func (o *Dbv0038TresListInner) SetCount(v int32)`
+`func (o *Dbv0038TresListInner) SetCount(v int64)`
 
 SetCount sets Count field to given value.
 

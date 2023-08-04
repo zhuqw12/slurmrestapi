@@ -5692,16 +5692,16 @@ components:
               - name: name
                 direct: 1
             flags:
-          - flags
-          - flags
-          name: name
-        - associations:
-          - cluster: cluster
-            partition: partition
-            user: user
-            account: account
-          - cluster: cluster
-            partition: partition
+              - flags
+              - flags
+            name: name
+          - associations:
+              - cluster: cluster
+                partition: partition
+                user: user
+                account: account
+              - cluster: cluster
+                partition: partition
             user: user
             account: account
           default:
@@ -9336,6 +9336,7 @@ components:
           type: integer
         count:
           description: count of TRES
+          format: int64
           type: integer
       type: object
     dbv0_0_38_job_comment:

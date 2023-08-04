@@ -3941,6 +3941,7 @@
              },
              "count": {
                "type": "integer",
+               "format": "int64",
                "description": "count of TRES"
              }
            }
